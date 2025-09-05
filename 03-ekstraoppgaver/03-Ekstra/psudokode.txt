@@ -1,0 +1,33 @@
+# -*- coding: utf-8 -*-
+# @Author: William Berge Groensberg
+# @Date:   2025-08-29 12:24:02
+# @Last Modified by:   William Berge Groensberg
+# @Last Modified time: 2025-08-29 12:43:24
+
+
+# importer random
+# importer time
+
+# lag variabel terning1
+# gi variabelen terning1 verdien random tall
+
+# lag variabelen terning2
+# gi variabelen terning2 verdien random tall
+
+# lag variabelen antall_trillet 
+# gi variablen verdi 0
+
+# skriv hvor mange like kan du få...
+# vent 1 sekund
+# skriv triller
+# vent 1 sekund
+# skriv verdi til terning1
+# skriv verdi til terning2
+
+# hvis terning1 er samme som terning2
+    # skriv det tok antall forsøk: antall_forsøk
+    # skriv trykk enter for å trille på nytt...
+# eller 
+    # øk verdien til antall_trillet med 1
+    # skriv ut anall forsøk: antall_forsøk
+    # skriv trykk enter for å trille på nytt...

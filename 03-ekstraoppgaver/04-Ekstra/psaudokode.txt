@@ -1,0 +1,35 @@
+
+importer random
+
+
+lag variabelen antall_forsøk
+gi variabelen antall_forsøk verdien 0
+
+print prøv å få Yatzy med 5 terninger!
+
+mens vi ikke har fått Yatzy: #løkke uten autoinkrement så den stopper ikke
+    Øk antall_forsøk med 1
+    Be bruker trykke Enter for å trille
+
+    Kast/lag variabel terning 1 (tilfeldig tall 1-6)
+    Kast/lag variabel terning 2 (tilfeldig tall 1-6)
+    Kast/lag variabel terning 3 (tilfeldig tall 1-6)
+    Kast/lag variabel terning 4 (tilfeldig tall 1-6)
+    Kast/lag variabel terning 5 (tilfeldig tall 1-6)
+
+    print terning 1 (tilfeldig tall 1-6)
+    print terning 2 (tilfeldig tall 1-6)
+    print terning 3 (tilfeldig tall 1-6)
+    print terning 4 (tilfeldig tall 1-6)
+    print terning 5 (tilfeldig tall 1-6)
+
+    Hvis alle terningene er like:
+        Stopp løkken (Yatzy er oppnådd)
+
+    Ellers:
+        Skriv ut "Ingen Yatzy denne gangen, prøv igjen!"
+        
+
+print Yatzy! Det tok {antall_forsøk} forsøk å få alle like.
+
+

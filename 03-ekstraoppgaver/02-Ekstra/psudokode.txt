@@ -1,0 +1,36 @@
+# # -*- coding: utf-8 -*-
+# # @Author: William Berge Groensberg
+# # @Date:   2025-08-28 20:08:01
+# # @Last Modified by:   William Berge Groensberg
+# # @Last Modified time: 2025-08-28 21:49:22
+
+tilbakemelding til meg selv:
+    ps: har blitt noen endringer i 
+    koden grunnet uforutsette feil
+
+
+# importere random
+
+# lag variabel terningen
+# gi terningen verdi random med et tall fra 1 til 6
+# lag variabel antall_ganger_trillet
+# gi antall_ganger_trillet verdi 1
+ 
+# skriv hvor mange forsøk bruker du på å få tallet 6 på terningen
+
+# vent tre sekunder
+
+# skriv forsøk og antall_ganger_trillet som nr på forsøkt
+# skriv verdien til terningen
+
+# hvis tallet er 6 
+    # skriv gratulere du vant
+    # skriv du brukte: antall forsøk
+# hvs ikke det er nr 6
+    # plusser antall_ganger_trillet med 1
+    # skriv trykk på enter for å trille på nytt
+
+
+# hvis enter trykkes 
+    # skriv ny verdi til terningen
+            

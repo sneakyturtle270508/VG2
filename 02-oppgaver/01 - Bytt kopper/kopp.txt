@@ -1,0 +1,20 @@
+#start
+# lag variabel blakopp
+#gi blakopp verdi bla_tusj
+#lag variabel rodkopp
+#gi rodkopp verdi rod_tusj
+#skriv rod kopp har variabel rodkopp
+#skriv bla kopp har variabel blakopp
+
+#lag blankkopp
+#gi blankkopp verdi null
+
+
+#gi blankkopp verdi blakopp
+#gi blakopp verdi rodkopp
+#gi blakopp verdi blankkopp  
+
+#skriv rod kopp har variabel rodkopp
+#skriv bla kopp har variabel blakopp
+#
+#slutt

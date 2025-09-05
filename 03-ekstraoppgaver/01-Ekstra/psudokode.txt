@@ -1,0 +1,43 @@
+
+# importer random bibilioteket
+# importer time biblioteket
+
+# lag variabelen poeng 
+# sett verdien til poeng til 0
+# lag en løkke som kjører 10 ganger
+
+# lag variabelen tall1
+# gi tall1 verdien et random tall 
+# lag variabelen tall2
+# gi tall2 verdien et random tall   
+
+# lag variabelen sum for å multiplisere tall1 og tall2
+
+# skriv spørsmål nr. verdien til i inni løkken
+# ny linje
+# skriv til brukeren hva de to tallene er 
+
+# lag en variabel som heter svar
+# gi variabelen svar verdien at brukeren får skrive inn
+
+# programmet venter 1 sekund
+# skriv sjekker fasit...
+# programmet venter 2 sekunder
+
+# hvis svaret var riktig
+#   legg til 1 poeng i variabelen poeng
+#   skriv du svarte riktig
+#   skriv ut verdien til variabelen poeng
+
+# hvis svaret var feil
+    # skriv du svarte feil
+    # skriv ut verdien til variabelen poeng
+    
+# hvis variabelen poeng har verdi 10
+    # skriv Supert! Du er god!
+# eller hvis variabelen poeng har verdi 9
+    # dette var bra!
+# eller hvis variabelen poeng har verdi 8
+    # skriv bra, men du kan øve mer!
+# eller
+    # du må øve mere!
