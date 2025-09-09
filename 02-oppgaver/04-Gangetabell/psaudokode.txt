@@ -1,0 +1,14 @@
+# -*- coding: utf-8 -*-
+# @Author: William Berge Groensberg
+# @Date:   2025-09-09 10:12:19
+# @Last Modified by:   William Berge Groensberg
+# @Last Modified time: 2025-09-09 10:15:56
+
+#lag en variabel som heter gangeTallet
+#gi gangeTallet verdi inputt som int
+#print her er gangetabbellen for: gangeTallet
+
+
+#lag løkke med teller som variabel som bruker tall mellom 0 og 101
+    #print teller
+  
