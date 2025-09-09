@@ -1,0 +1,9 @@
+#importer random
+
+lag variabelen talletSomSkalBliGjettetAvBrukerenSomBrukerProgrammet 
+gi variabelen talletSomSkalBliGjettetAvBrukerenSomBrukerProgrammet et randomt tall
+
+lag variabelen inputtSomBrukerGirTerminalen
+gi variabelen inputtSomBrukerGirTerminalen verdi int inputt
+
+while
