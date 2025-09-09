@@ -117,3 +117,6 @@ ascii_box(f"Du fikk {poengTeller} riktige! {'⭐'*poengTeller}")
 ascii_box(f"Du fikk {poengTellerMotsatt} feil. {'❌'*poengTellerMotsatt}")
 
 print("Start programmet på nytt for å prøve igjen...")
+
+
+# Lærer: Grei alternativ løsning, men veldig likt det første alternativ med unntak av ASCII-boxen. :-)

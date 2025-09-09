@@ -211,3 +211,6 @@ print(f"du fikk: {poengTellerMotsatt} feil.")
 # print start programmet på nytt for å restarte...
 print("\nstart programmet på nytt for å restarte...")
 
+
+# Lærer: Fin og ryddig løsning, William!
+

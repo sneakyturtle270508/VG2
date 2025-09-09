@@ -8,6 +8,7 @@ lag variabelen poengTeller
 gi verdi 0 til variabelen poengTeller
 lag variabelen poengTellerMotsatt
 gi verdi 0 til variabelen poengTellerMotsatt
+# Lærer: Trenger du variabelen poengTellerMotsatt for å finne ut hvor mange feil brukeren fikk??? ja siden jeg tenkte det var den letteste løsningen isteden for å regne utifra 10 minus antall riktige
 
 ---------------------------------------------------
 lag s1 til s10 og legg in et spørsmål pr som str
@@ -31,6 +32,9 @@ hvis  input fra bruker er svar oslo
     øk verdien til poengTeller med 1
 eller
     øk verdien til poengTellerMotsatt med 1
+
+# Lærer: Husk at du skal skrive en respons til bruker etter hvert spørsmål. jeg glemte og oppdatere psaudokoden    
+
 print -----------------------------------
 
 print s2 og gi bruker muliget til inputt
@@ -117,4 +121,7 @@ print du fikk: {poengTeller} riktige
 print du fikk: {poengTellerMotsatt} feil
 
 print start programmet på nytt for å restarte...
+
+
+# Lærer: Ellers bra pseudokode, William. # William: takk
 
