@@ -2,7 +2,7 @@
 # @Author: William Berge Groensberg
 # @Date:   2025-08-29 14:37:59
 # @Last Modified by:   William Berge Groensberg
-# @Last Modified time: 2025-09-05 12:36:07
+# @Last Modified time: 2025-09-05 20:27:35
 
 # importer random
 # importer time
@@ -22,6 +22,7 @@ while True:
     antall_forsok += 1
 #     Be bruker trykke Enter for å trille
     input("Trykk Enter for å trille terningene...")
+    
 
 #     Kast/lag variabel terning 1 (tilfeldig tall 1-6)
     t1 = random.randint(1, 6)

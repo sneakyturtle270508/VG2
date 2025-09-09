@@ -1,0 +1,9 @@
+# Lag to variabler for tall
+
+# Addisjon
+# Subtraksjon
+# Multiplikasjon
+# Divisjon
+# Potensregning
+
+# Test av regnestykket
