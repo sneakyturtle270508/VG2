@@ -2,7 +2,7 @@
 # @Author: William Berge Groensberg
 # @Date:   2025-09-09 09:18:42
 # @Last Modified by:   William Berge Groensberg
-# @Last Modified time: 2025-09-09 09:27:40
+# @Last Modified time: 2025-09-09 09:43:17
 # Lag to variabler for tall
 tall1 = 3
 tall2 = 2
@@ -26,3 +26,5 @@ tall3 = 4
 
 resultat4 = tall1 + tall2 * tall3
 print(resultat4)
+
+# test
