@@ -1,9 +1,24 @@
-#importer random
+# -*- coding: utf-8 -*-
+# @Author: William Berge Groensberg
+# @Date:   2025-09-09 10:58:29
+# @Last Modified by:   William Berge Groensberg
+# @Last Modified time: 2025-09-09 10:58:57
+# importer random
 
-lag variabelen talletSomSkalBliGjettetAvBrukerenSomBrukerProgrammet 
-gi variabelen talletSomSkalBliGjettetAvBrukerenSomBrukerProgrammet et randomt tall
+# lag variabelen talletSomSkalBliGjettetAvBrukerenSomBrukerProgrammet 
+# gi variabelen talletSomSkalBliGjettetAvBrukerenSomBrukerProgrammet et randomt tall
 
-lag variabelen inputtSomBrukerGirTerminalen
-gi variabelen inputtSomBrukerGirTerminalen verdi int inputt
 
-while
+
+# så lenge inputtSomBrukerGirTerminalen ikke er lik talletSomSkalBliGjettetAvBrukerenSomBrukerProgrammet
+#     lag variabelen inputtSomBrukerGirTerminalen
+#     gi variabelen inputtSomBrukerGirTerminalen verdi int inputt
+    
+#     spør bruker hvilke tall den jetter
+    
+#     hvis inputtSomBrukerGirTerminalen er større en talletSomSkalBliGjettetAvBrukerenSomBrukerProgrammet
+#         print tallet er lavere
+#     eller inputtSomBrukerGirTerminalen er mindre en talletSomSkalBliGjettetAvBrukerenSomBrukerProgrammet
+#         print tallet er høyere
+    
+# print du gjettet rinktig tall
