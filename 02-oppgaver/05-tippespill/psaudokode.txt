@@ -2,11 +2,11 @@
 # @Author: William Berge Groensberg
 # @Date:   2025-09-09 10:58:29
 # @Last Modified by:   William Berge Groensberg
-# @Last Modified time: 2025-09-09 10:58:57
+# @Last Modified time: 2025-09-09 21:23:46
 # importer random
 
 # lag variabelen talletSomSkalBliGjettetAvBrukerenSomBrukerProgrammet 
-# gi variabelen talletSomSkalBliGjettetAvBrukerenSomBrukerProgrammet et randomt tall
+# gi variabelen talletSomSkalBliGjettetAvBrukerenSomBrukerProgrammet et randomt tall mellom 1 og 10
 
 
 
@@ -14,8 +14,11 @@
 #     lag variabelen inputtSomBrukerGirTerminalen
 #     gi variabelen inputtSomBrukerGirTerminalen verdi int inputt
     
-#     spør bruker hvilke tall den jetter
-    
+#     spør bruker hvilke tall den gjetter
+
+#     sjekk om bruker skrev in et tall
+#     gir all verdierror print som sier at bruker må skrive in et tall
+        
 #     hvis inputtSomBrukerGirTerminalen er større en talletSomSkalBliGjettetAvBrukerenSomBrukerProgrammet
 #         print tallet er lavere
 #     eller inputtSomBrukerGirTerminalen er mindre en talletSomSkalBliGjettetAvBrukerenSomBrukerProgrammet
