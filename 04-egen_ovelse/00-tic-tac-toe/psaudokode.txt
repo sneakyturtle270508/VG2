@@ -1,0 +1,73 @@
+opg – innhold  
+to spillere spiller Tic Tac Toe mot hverandre  
+gi beskjed om riktig/ugyldig trekk  
+telle opp poeng for vinner, tap og uavgjort (draw)  
+kunne spille flere runder  
+
+---------------------------------------------------
+
+lag variabel player1Score  
+gi verdi 0 til variabelen player1Score  
+
+lag variabel player2Score  
+gi verdi 0 til variabelen player2Score  
+
+lag variabel drawScore  
+gi verdi 0 til variabelen drawScore  
+
+---------------------------------------------------
+
+lag en funksjon printBoard som viser brettet med 9 felter  
+fyll feltene først med tall 1–9 slik at spillerne kan velge plass  
+
+---------------------------------------------------
+
+start en løkke for selve spillet (så man kan spille flere runder)  
+
+lag en liste board = ["1","2","3","4","5","6","7","8","9"]  
+lag en variabel currentPlayer = "X"  
+
+---------------------------------------------------
+
+while True (spillet går helt til break):  
+
+    printBoard(board)  
+    print "Player X" eller "Player O" sin tur  
+
+    be spiller om input (velg et tall 1–9)  
+
+    sjekk om input er gyldig (tall 1–9 og feltet er ledig)  
+        hvis ikke gyldig, si "ugyldig trekk" og be om nytt input  
+
+    plasser symbolet ("X" eller "O") i valgt felt  
+
+    sjekk om currentPlayer har vunnet  
+        hvis ja:  
+            print "Spiller X/O vant!"  
+            hvis currentPlayer == "X": player1Score += 1  
+            ellers: player2Score += 1  
+            break ut av løkka (runde ferdig)  
+
+    sjekk om brettet er fullt (ingen tall igjen)  
+        hvis ja:  
+            print "Uavgjort!"  
+            drawScore += 1  
+            break ut av løkka (runde ferdig)  
+
+    bytt spiller  
+        hvis currentPlayer == "X" sett til "O"  
+        ellers sett til "X"  
+
+---------------------------------------------------
+
+etter at en runde er ferdig:  
+print "Scoreboard:"  
+print "Player X: {player1Score}"  
+print "Player O: {player2Score}"  
+print "Draws: {drawScore}"  
+
+spør spillerne om de vil spille på nytt (ja/nei)  
+    hvis nei: avslutt hele spillet  
+    hvis ja: start ny runde med nytt board  
+
+---------------------------------------------------
