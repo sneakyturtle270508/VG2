@@ -8,7 +8,8 @@ lag variabelen poengTeller
 gi verdi 0 til variabelen poengTeller
 lag variabelen poengTellerMotsatt
 gi verdi 0 til variabelen poengTellerMotsatt
-# Lærer: Trenger du variabelen poengTellerMotsatt for å finne ut hvor mange feil brukeren fikk??? ja siden jeg tenkte det var den letteste løsningen isteden for å regne utifra 10 minus antall riktige
+# Lærer: Trenger du variabelen poengTellerMotsatt for å finne ut hvor mange feil brukeren fikk??? ja siden jeg tenkte det var den letteste løsningen isteden for å regne utifra 10 minus antall riktige slik at den er skalerbar.
+
 
 ---------------------------------------------------
 lag s1 til s10 og legg in et spørsmål pr som str
