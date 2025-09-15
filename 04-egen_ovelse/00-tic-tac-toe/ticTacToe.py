@@ -2,7 +2,7 @@
 # @Author: William Berge Groensberg
 # @Date:   2025-09-11 14:16:31
 # @Last Modified by:   William Berge Groensberg
-# @Last Modified time: 2025-09-11 15:54:27
+# @Last Modified time: 2025-09-14 18:36:04
 # initialisering
 board = [1,2,3,4,5,6,7,8,9]
 spiller1 = []

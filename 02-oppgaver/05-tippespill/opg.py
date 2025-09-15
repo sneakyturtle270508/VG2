@@ -2,7 +2,7 @@
 # @Author: William Berge Groensberg
 # @Date:   2025-09-09 10:58:29
 # @Last Modified by:   William Berge Groensberg
-# @Last Modified time: 2025-09-09 21:45:06
+# @Last Modified time: 2025-09-12 13:43:06
 # importer random
 
 
@@ -17,6 +17,7 @@ talletSomSkalBliGjettetAvBrukerenSomBrukerProgrammet = random.randint(1, 10)
 # lag variabelen brukerForsok
 # sett den til 0
 brukerForsok = 0
+
 
 
 
