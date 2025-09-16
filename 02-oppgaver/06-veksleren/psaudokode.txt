@@ -1,0 +1,25 @@
+
+lag en diksonery for hver seddel som heter penger
+"1000" : 0
+
+
+lag variabel kjopePris og giv input og mota svar om kjøpesum
+lag variabel betaltPris og giv input og mota svar om hvordan kunden vil betale
+
+
+
+lag variabel sjekkerIgjen og giv den verdi kjopePris % betaltPris
+
+hvis det ikke er et tall skriv til bruker du må skrive inn et tall
+
+eller
+
+!!!dette gjøres med alle typene med sedler!!!
+
+øker penger (1000) med hvor mange ganger det er 1000 lapper 
+
+
+sjekker verdien penger ("1000") har og ganger det med 1000 slik at det kan minuse fra 
+
+
+
