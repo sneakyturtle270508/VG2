@@ -2,7 +2,7 @@
 # @Author: William Berge Groensberg
 # @Date:   2025-09-09 10:12:19
 # @Last Modified by:   William Berge Groensberg
-# @Last Modified time: 2025-09-15 21:02:14
+# @Last Modified time: 2025-09-18 08:12:08
 
 #lag en variabel som heter gangeTallet
 #gi gangeTallet verdi inputt som int
@@ -10,7 +10,7 @@ gangeTallet = int(input("Hvilke gangetabbel hvil du se: "))
     #print her er gangetabbellen for: gangeTallet
 print("Her er gangetabbellen for: ", gangeTallet)
 
-#gmmel løsning: 
+#gammel løsning: 
 # #lag løkke med teller som variabel som bruker tall mellom 0 og 101
 # for teller in range(0, 10, gangeTallet):
 #     #print teller
