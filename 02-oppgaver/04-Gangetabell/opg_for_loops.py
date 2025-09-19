@@ -2,7 +2,7 @@
 # @Author: William Berge Groensberg
 # @Date:   2025-09-09 10:12:19
 # @Last Modified by:   William Berge Groensberg
-# @Last Modified time: 2025-09-18 08:12:08
+# @Last Modified time: 2025-09-19 13:10:36
 
 #lag en variabel som heter gangeTallet
 #gi gangeTallet verdi inputt som int
@@ -18,7 +18,7 @@ print("Her er gangetabbellen for: ", gangeTallet)
 
 #forslag til løsning: 
 # la teller gå fra 0 til 11
-for teller in range(0, 11):  
+for teller in range(11):  
     # skriv hvilke tall som ganges med, skriv x, skriv gangetallet, sriv =, skriv svar av teller * gangeTallet
     print(teller, "x", gangeTallet, "=", teller * gangeTallet)
     
