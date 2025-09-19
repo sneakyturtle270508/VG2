@@ -2,7 +2,7 @@
 # @Author: William Berge Groensberg
 # @Date:   2025-09-09 10:58:29
 # @Last Modified by:   William Berge Groensberg
-# @Last Modified time: 2025-09-19 12:54:59
+# @Last Modified time: 2025-09-19 13:21:29
 # importer random
 import random
 
@@ -12,13 +12,14 @@ heltalletSomSkalBliGjettetAvBrukerenSomBrukerProgrammet = random.randint(1, 10)
 
 #     lag variabelen inputtSomBrukerGirTerminalen
 #     gi variabelen inputtSomBrukerGirTerminalen verdi int inputt
-inputtSomBrukerGirTerminalen = int(input("Hvilke tall gjetter du: "))
+inputtSomBrukerGirTerminalen = input("Hvilke tall gjetter du: ")
 
+    
 # så lenge inputtSomBrukerGirTerminalen ikke er lik heltalletSomSkalBliGjettetAvBrukerenSomBrukerProgrammet
 while inputtSomBrukerGirTerminalen != heltalletSomSkalBliGjettetAvBrukerenSomBrukerProgrammet:
     
-    
-    
+        
+
 # spør bruker hvilke tall den jetter
     
     #     hvis inputtSomBrukerGirTerminalen er større en heltalletSomSkalBliGjettetAvBrukerenSomBrukerProgrammet
