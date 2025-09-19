@@ -30,7 +30,7 @@ while True:
    
 
 #     hvis input ikke består av bare tall
-    if not inputtSomBrukerGirTerminalen.isdigit():
+    if not inputtSomBrukerGirTerminalen.isdigit(): # Lærer: Flott at du sjekker at brukerens input er heltall. 
 #         skriv "du må skrive inn et heltall"
         print("Du må skrive inn et heltall.")
 #         fortsett til neste runde
@@ -61,3 +61,9 @@ while True:
         print(f"Antall forsøk: {brukerForsok}")
 #         break
         break
+
+
+# Lærer: Du kommer i mål med denne oppgaven, men som jeg kommenterte tidligere er jeg ikke så
+#        tilhenger av å bruke "True" i while-betingelsen. Grunnen er at du lager en evig løkke og så må
+#        en lete nedover i koden for å finne "break". Det kan da være vanskelige å finne ut hva som faktisk
+#        stopper løkka. Fint at du har laget en alternativ løsning.

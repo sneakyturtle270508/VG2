@@ -1,0 +1,29 @@
+Lag en kortstokk med 52 kort (du kan representere kortene som tupler, strenger eller ordbøker).
+
+Del ut to kort til spilleren og to kort til dealeren.
+
+La spilleren velge mellom:
+
+Hit (trekke et nytt kort)
+
+Stand (stoppe turen sin)
+
+Dealeren må trekke kort helt til de har 17 eller mer.
+
+Bestem hvem som vinner ut fra disse reglene:
+
+Hvis spilleren går over 21 → spilleren taper.
+
+Hvis dealeren går over 21 → dealeren taper.
+
+Hvis begge holder seg under 21 → den som er nærmest 21 vinner.
+
+Hvis summen er lik → det blir uavgjort.
+
+Skriv ut resultatet tydelig til slutt.
+
+Ekstra utfordring (valgfritt):
+
+La ess (A) telle som både 1 eller 11.
+
+Lag et system med innsats og virtuelle penge

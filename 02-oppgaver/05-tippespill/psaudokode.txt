@@ -24,3 +24,7 @@
 #         skriv "du gjettet riktig"
 #         skriv antall forsøk
 #         break
+
+
+# Lærer: Ryddig pseudokode, William. Se mine kommentarer i python-koden når det gjelder bruk av
+#        while-løkka på denne måten.

@@ -26,10 +26,12 @@ while inputtSomBrukerGirTerminalen != heltalletSomSkalBliGjettetAvBrukerenSomBru
     #         print tallet er lavere
         print("tallet er lavere")
     #     eller inputtSomBrukerGirTerminalen er mindre en heltalletSomSkalBliGjettetAvBrukerenSomBrukerProgrammet
-    elif inputtSomBrukerGirTerminalen < heltalletSomSkalBliGjettetAvBrukerenSomBrukerProgrammet:
+    elif inputtSomBrukerGirTerminalen < heltalletSomSkalBliGjettetAvBrukerenSomBrukerProgrammet: # Lærer: Her kunne du bare brukt "else".
     # print tallet er høyere
         print("Tallet er høyere")
     
     inputtSomBrukerGirTerminalen = int(input("Hvilke tall gjetter du: "))
 # print du gjettet rinktig tall
 print("du gjettet riktig")
+
+# Lærer: Fin alternativ løsning som jeg synes blir enklere å lese. Bra! :-)
