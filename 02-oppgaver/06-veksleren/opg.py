@@ -2,9 +2,9 @@
 # # @Author: William Berge Groensberg
 # # @Date:   2025-09-16 08:40:49
 # # @Last Modified by:   William Berge Groensberg
-# # @Last Modified time: 2025-09-16 10:52:29
+# # @Last Modified time: 2025-09-19 12:33:30
 
-test = []
+
 
 # lag en diksonery for hver seddel som heter penger
 # "1000" : 0
@@ -22,18 +22,13 @@ penger = {
 # lag variabel kjopePris og giv input og mota svar om kjøpesum
 kjopePris = int(input("Hva er kjøpesummen: "))
 # lag variabel betaltPris og giv input og mota svar om hvordan kunden vil betale
-betaltPris = int(input("hva betaler du med "))
+betaltPris = int(input("hva betaler du: "))
 
 
 
 # lag variabel sjekkerIgjen og giv den verdi kjopePris % betaltPris
 sjekkerIgjen = betaltPris % kjopePris
 
-
-
-# hvis det ikke er et tall skriv til bruker du må skrive inn et tall
-
-# eller
 
 # !!!dette gjøres med alle typene med sedler!!!
 
@@ -42,52 +37,36 @@ penger["1000"] += sjekkerIgjen // 1000
 # sjekker verdien penger ("1000") har og ganger det med 1000 slik at det kan minuse fra 
 sjekkerIgjen -= penger["1000"] * 1000
 
-# øker penger (500) med hvor mange ganger det er 1000 lapper 
+# øker penger (500) med hvor mange ganger det er 500 lapper 
 penger["500"] += sjekkerIgjen // 500
-# sjekker verdien penger ("500") har og ganger det med 1000 slik at det kan minuse fra 
+# sjekker verdien penger ("500") har og ganger det med 500 slik at det kan minuse fra 
 sjekkerIgjen -= penger["500"] * 500
 
-# øker penger (200) med hvor mange ganger det er 1000 lapper 
-penger["200"] += sjekkerIgjen // 200
-# sjekker verdien penger ("200") har og ganger det med 1000 slik at det kan minuse fra 
+
+penger["200"] += sjekkerIgjen // 200 
 sjekkerIgjen -= penger["200"] * 200
 
-# øker penger (100) med hvor mange ganger det er 1000 lapper 
-penger["100"] += sjekkerIgjen // 100
-# sjekker verdien penger ("100") har og ganger det med 1000 slik at det kan minuse fra 
+penger["100"] += sjekkerIgjen // 100 
 sjekkerIgjen -= penger["100"] * 100
 
-# øker penger (50) med hvor mange ganger det er 1000 lapper 
+
 penger["50"] += sjekkerIgjen // 50
-# sjekker verdien penger ("50") har og ganger det med 1000 slik at det kan minuse fra 
 sjekkerIgjen -= penger["50"] * 50
 
-# øker penger (20) med hvor mange ganger det er 1000 lapper 
 penger["20"] += sjekkerIgjen // 20
-# sjekker verdien penger ("20") har og ganger det med 1000 slik at det kan minuse fra 
 sjekkerIgjen -= penger["20"] * 20
 
-# øker penger (10) med hvor mange ganger det er 1000 lapper 
 penger["10"] += sjekkerIgjen // 10
-# sjekker verdien penger ("10") har og ganger det med 1000 slik at det kan minuse fra 
 sjekkerIgjen -= penger["10"] * 10
 
-# øker penger (5) med hvor mange ganger det er 1000 lapper 
 penger["5"] += sjekkerIgjen // 5
-# sjekker verdien penger ("1000") har og ganger det med 1000 slik at det kan minuse fra 
 sjekkerIgjen -= penger["5"] * 5
 
 
-# øker penger (1) med hvor mange ganger det er 1000 lapper 
 penger["1"] += sjekkerIgjen // 1
-# sjekker verdien penger ("1") har og ganger det med 1000 slik at det kan minuse fra 
 sjekkerIgjen -= penger["1"] * 1
 
-
-
 # print all verdiene i penger
-    
-
 print(f"{penger['1000']} tusen lapp(er)")
 print(f"{penger['500']} fem hundre lapp(er)")
 print(f"{penger['200']} to hundre lapp(er)")

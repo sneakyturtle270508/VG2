@@ -2,7 +2,7 @@
 # # @Author: William Berge Groensberg
 # # @Date:   2025-09-16 08:22:42
 # # @Last Modified by:   William Berge Groensberg
-# # @Last Modified time: 2025-09-16 10:22:08
+# # @Last Modified time: 2025-09-19 12:24:10
 
 
 
@@ -35,7 +35,3 @@ betaltPris = int(input("hva betaler du med "))
 
 
 
-# lag variabel sjekkerIgjen og giv den verdi kjopePris % betaltPris
-sjekkerIgjen = betaltPris % kjopePris
-
-print(sjekkerIgjen)
