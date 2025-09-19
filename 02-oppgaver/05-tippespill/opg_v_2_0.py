@@ -2,7 +2,7 @@
 # @Author: William Berge Groensberg
 # @Date:   2025-09-09 10:58:29
 # @Last Modified by:   William Berge Groensberg
-# @Last Modified time: 2025-09-12 12:35:44
+# @Last Modified time: 2025-09-19 12:54:59
 # importer random
 import random
 
@@ -35,3 +35,4 @@ while inputtSomBrukerGirTerminalen != heltalletSomSkalBliGjettetAvBrukerenSomBru
 print("du gjettet riktig")
 
 # Lærer: Fin alternativ løsning som jeg synes blir enklere å lese. Bra! :-)
+
