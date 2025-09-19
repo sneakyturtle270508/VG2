@@ -2,11 +2,13 @@
 # @Author: William Berge Groensberg
 # @Date:   2025-09-18 14:12:06
 # @Last Modified by:   William Berge Groensberg
-# @Last Modified time: 2025-09-19 15:43:06
+# @Last Modified time: 2025-09-19 16:13:38
 
 import random
 import time
 import os
+
+
 
 def create_deck():
     suits = ['♠', '♥', '♦', '♣']
@@ -124,8 +126,8 @@ while True:
             time.sleep(1)
 
         # Resultat
-        player_total = hand_value(player_hand)
         dealer_total = hand_value(dealer_hand)
+        player_total = hand_value(player_hand)
 
         if dealer_total > 21 or player_total > dealer_total:
             print("\nDu vinner! 🎉")
@@ -137,3 +139,5 @@ while True:
 
     else:
         print("Ugyldig valg, prøv igjen.")
+    
+    
