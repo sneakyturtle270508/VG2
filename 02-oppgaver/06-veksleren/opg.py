@@ -29,6 +29,7 @@ betaltPris = int(input("hva betaler du: "))
 # lag variabel sjekkerIgjen og giv den verdi kjopePris % betaltPris
 sjekkerIgjen = betaltPris % kjopePris
 
+# Lærer: Skriv gjerne her hvor mye totalt (sjekkerIgjen) kunden skal få tilbake.
 
 # !!!dette gjøres med alle typene med sedler!!!
 
@@ -76,6 +77,13 @@ print(f"{penger['20']} tjue krone(r)")
 print(f"{penger['10']} ti krone(r)")
 print(f"{penger['5']} fem krone(r)")
 print(f"{penger['1']} en krone(r)")
+
+
+# Lærer: Du har løst oppgaven på en original måte. Det er bra!
+#        Dersom kunden bare skulle hatt tilbake 1 krone, vil programmet ditt
+#        likevel kjøre gjennom kalkulasjonene for hver eneste myntenhet fra kr 1000 til kr 1.
+#        Kunne dette vært løst noe mer effektivt der du også faktisk kun printer myntenheter
+#        kunden skal ha tilbake? 
 
 
 

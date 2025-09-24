@@ -28,6 +28,10 @@
 
 
 # print all verdiene i penger
+
+
+# Lærer: Original løsning, William. Bra! Det ser kanskje ut som du har gjørt løsningen litt
+#        vanskeligere enn nødvendig.
     
 
 
