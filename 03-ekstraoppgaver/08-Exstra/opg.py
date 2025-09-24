@@ -2,54 +2,836 @@
 # @Author: William Berge Groensberg
 # @Date:   2025-09-24 09:24:00
 # @Last Modified by:   William Berge Groensberg
-# @Last Modified time: 2025-09-24 09:41:32
-# Mona Lisa, by Al Sweigart al@inventwithpython.com
-# Draws an Andy Warhol-like drawing of the Mona Lisa with turtle
-# graphics.
-
+# @Last Modified time: 2025-09-24 13:25:38
 import turtle
-turtle.tracer(400, 0) # Make the turtle draw faster.
+from turtle import *
 
-"""The image data for the Mona Lisa. I created this through a complicated
-process: I found a picture of the Mona Lisa online, converted it to
-grayscale in Photoshop, then greatly increased the contrast, then shrunk
-it down, and converted that image into a pure black/white image. I wrote
-a script using the Pillow module to turn the black/white pixel
-information in to a stream of 1s and 0s, and then turned that binary
-number into this hexadecimal number."""
-monaLisaData = '0x54a9554ebaaab5555b776eeb56addebdb5db5b33fd9b6d5d6db55affcaeed576d559dd71576ab7a9a76ee32ceb59b556edd591df6b5aead5b265add256954aa52ad5aa55aa96ab55fd576d569d2b556affea992a955b4aa94effd4dd555496aa57f7feb45554a51534b9dfecb2aa36caa4a627ff14a49c254922d12ffd69345b54552c037f88a951423249a89ffe6905494892bc44bfda6689e74925a22bfd7125432a927800bff9d24bdeac83b5edfef6935fb7757fbbfff6d10adddd4ba9b5ffff4d5eeef37a913ff55255fabaff86aaffff92aafffd59103feafaadfb6fffc99fffe8ab5bff5ffc947ffffbdffd6f7f571ffffeeb6f7bfefe3d57eeffffffff77d9afbf7f5b7bbd7ffe5b7fff7efbff7fbff29fffafbffeffdebf97ffffdfedff6ffffdffffded7feffdd6fffffff7fd5fdb76ffedefffffffffffb7ff77fbb7dbbfef5b7feb57fdd6ddbf5efbdeb5bfffd6feeffdffe9afffdedefbb7fff8227fefafbfdfbefe5116bfcbbb7eeffde048fffe4dddfbbffca027ffbb6ff75f7fa090bf7fdd7bbabdfc0096fbee33ffdf7e2484ffbfbd1ddebff000170dffbef7fcfca910affffe9fb5ffe00897bffffdbdc7ff90017fffffefabffee805ffffeafefefefb757beefffb76ebf7fbfffffbffbf76ffbeedbfffffdffdbdffff7ffffffffffffffbbeff6bfefb76ffffdffffff7fbffb3fbfffffffbbfefd59efffdbefeffffbeafffffffffffffff7f7fefffffffffeedfbeffedfbffffffffeffffffbffeffffff7efdf7ffffffffff7fffefffffffffdfffeffffffbefffffbfbffdffffffff7bffff7ffffffffbfffffffbdfffbbdfffffffbdffebbffffffffffffff7efffffffffffff7feff5ffffff7f7ffbf76f05ffdffdfffff7bf892bffffffdfffffbe4a5fffffffefffffd50affffffffffffdf6a43fffffffffffffbb51f7fdfbfffffffd4baad57ffdfbfffd6b4f7ffffffffffff3ae7affffffffbff5be73f77effffeff7e8bbdffffffddffff5bfcefbf7ffffff7fd8def7fffefffffffeffffbfffffffffffb7fffffffffffffffefb77fffffffffffffffffffffffbffffffbfffffffffffffffffffffffffffffff7fffffffffffffffffffffff7ffffffffffffffffffffffff7ff7ffdfffffffeffffffffffffffffffffffff7fffffffffffffffffffffffffff'
-
-def drawFromData(image_data, image_width, image_height, left, top, pixel_size):
-    turtle.penup()
-
-    inBinary = bin(int(image_data, 16))
-
-    # Remove '0b' from the start of the hex number:
-    inBinary = inBinary[2:]
-
-    # Add leading zeros to the binary number, if needed:
-    inBinary = inBinary.rjust(image_width * image_height, '0')
-
-    for y in range(image_height):
-        for x in range(image_width):
-            turtle.goto(left + (x * pixel_size), top - (y * pixel_size))
-
-            if inBinary[y * image_width + x] == '1': # (!) Try switching this to '0'.
-                turtle.begin_fill()
-                turtle.setheading(0)
-                turtle.forward(pixel_size) # draw top of the box
-                turtle.right(90)
-                turtle.forward(pixel_size) # draw right edge of the box
-                turtle.right(90)
-                turtle.forward(pixel_size) # draw bottom of the box
-                turtle.right(90)
-                turtle.forward(pixel_size) # draw left edge of the box
-                turtle.end_fill()          # fill in the box
-
-turtle.bgcolor('#FFF7D0')
-turtle.fillcolor("#000000")
-drawFromData(monaLisaData, 68, 100, -300, 400, 4)
+speed(0)
 
 
-turtle.update() # Finish drawing the screen.
-turtle.exitonclick() # When user clicks on the window, close it.
+def redSquare():
+    fillcolor("green")
+    begin_fill()
+    for i in range(4):
+        forward(30)
+        right(90)
+    end_fill()
+
+
+def blueSquare():
+    fillcolor("royalblue")
+    begin_fill()
+    for i in range(4):
+        forward(30)
+        right(90)
+    end_fill()
+
+
+def yellowSquare():
+    fillcolor("yellow")
+    begin_fill()
+    for i in range(4):
+        forward(30)
+        right(90)
+    end_fill()
+
+
+def skinSquare():
+    fillcolor("sandybrown")
+    begin_fill()
+    for i in range(4):
+        forward(30)
+        right(90)
+    end_fill()
+
+
+def brownSquare():
+    fillcolor("saddlebrown")
+    begin_fill()
+    for i in range(4):
+        forward(30)
+        right(90)
+    end_fill()
+
+
+def blackSquare():
+    fillcolor("black")
+    begin_fill()
+    for i in range(4):
+        forward(30)
+        right(90)
+    end_fill()
+
+
+penup()
+goto(100, -150)
+pendown()
+brownSquare()
+
+penup()
+goto(70, -150)
+pendown()
+brownSquare()
+
+penup()
+goto(40, -150)
+pendown()
+brownSquare()
+
+penup()
+goto(10, -150)
+pendown()
+brownSquare()
+
+penup()
+goto(10, -120)
+pendown()
+brownSquare()
+
+penup()
+goto(40, -120)
+pendown()
+brownSquare()
+
+penup()
+goto(70, -120)
+pendown()
+brownSquare()
+
+penup()
+goto(40, -90)
+pendown()
+blueSquare()
+
+penup()
+goto(10, -90)
+pendown()
+blueSquare()
+
+penup()
+goto(-20, -90)
+pendown()
+blueSquare()
+
+penup()
+goto(-20, -60)
+pendown()
+blueSquare()
+
+penup()
+goto(-50, -60)
+pendown()
+blueSquare()
+
+penup()
+goto(10, -60)
+pendown()
+blueSquare()
+
+penup()
+goto(40, -60)
+pendown()
+blueSquare()
+
+penup()
+goto(70, -60)
+pendown()
+skinSquare()
+
+penup()
+goto(100, -60)
+pendown()
+skinSquare()
+
+penup()
+goto(100, -30)
+pendown()
+skinSquare()
+
+penup()
+goto(70, -30)
+pendown()
+skinSquare()
+
+penup()
+goto(40, -30)
+pendown()
+skinSquare()
+
+penup()
+goto(10, -30)
+pendown()
+blueSquare()
+
+penup()
+goto(-20, -30)
+pendown()
+blueSquare()
+
+penup()
+goto(-50, -30)
+pendown()
+blueSquare()
+
+penup()
+goto(-50, 0)
+pendown()
+blueSquare()
+
+penup()
+goto(-20, 0)
+pendown()
+yellowSquare()
+
+penup()
+goto(10, 0)
+pendown()
+blueSquare()
+
+penup()
+goto(40, 0)
+pendown()
+redSquare()
+
+penup()
+goto(70, 0)
+pendown()
+skinSquare()
+
+penup()
+goto(100, 0)
+pendown()
+skinSquare()
+
+penup()
+goto(100, 30)
+pendown()
+redSquare()
+
+penup()
+goto(70, 30)
+pendown()
+redSquare()
+
+penup()
+goto(40, 30)
+pendown()
+redSquare()
+
+penup()
+goto(10, 30)
+pendown()
+redSquare()
+
+penup()
+goto(-20, 30)
+pendown()
+blueSquare()
+
+penup()
+goto(-50, 30)
+pendown()
+blueSquare()
+
+penup()
+goto(-50, 60)
+pendown()
+redSquare()
+
+penup()
+goto(-20, 60)
+pendown()
+blueSquare()
+
+penup()
+goto(10, 60)
+pendown()
+redSquare()
+
+penup()
+goto(40, 60)
+pendown()
+redSquare()
+
+penup()
+goto(70, 60)
+pendown()
+redSquare()
+
+penup()
+goto(10, 90)
+pendown()
+redSquare()
+
+penup()
+goto(-20, 90)
+pendown()
+redSquare()
+
+penup()
+goto(-50, 90)
+pendown()
+redSquare()
+
+penup()
+goto(-50, 120)
+pendown()
+skinSquare()
+
+penup()
+goto(-50, 120)
+pendown()
+skinSquare()
+
+penup()
+goto(-20, 120)
+pendown()
+skinSquare()
+
+penup()
+goto(1000, 120)
+pendown()
+skinSquare()
+
+penup()
+goto(40, 120)
+pendown()
+skinSquare()
+
+penup()
+goto(70, 120)
+pendown()
+skinSquare()
+
+penup()
+goto(100, 150)
+pendown()
+blackSquare()
+
+penup()
+goto(70, 150)
+pendown()
+blackSquare()
+
+penup()
+goto(40, 150)
+pendown()
+blackSquare()
+
+penup()
+goto(10, 150)
+pendown()
+blackSquare()
+
+penup()
+goto(-20, 150)
+pendown()
+skinSquare()
+
+penup()
+goto(-50, 150)
+pendown()
+skinSquare()
+
+penup()
+goto(-50, 180)
+pendown()
+skinSquare()
+
+penup()
+goto(-20, 180)
+pendown()
+skinSquare()
+
+penup()
+goto(10, 180)
+pendown()
+skinSquare()
+
+penup()
+goto(40, 180)
+pendown()
+blackSquare()
+
+penup()
+goto(70, 180)
+pendown()
+skinSquare()
+
+penup()
+goto(100, 180)
+pendown()
+skinSquare()
+
+penup()
+goto(130, 180)
+pendown()
+skinSquare()
+
+penup()
+goto(100, 210)
+pendown()
+skinSquare()
+
+penup()
+goto(70, 210)
+pendown()
+skinSquare()
+
+penup()
+goto(40, 210)
+pendown()
+skinSquare()
+
+penup()
+goto(10, 210)
+pendown()
+blackSquare()
+
+penup()
+goto(-20, 210)
+pendown()
+skinSquare()
+
+penup()
+goto(-50, 210)
+pendown()
+skinSquare()
+
+penup()
+goto(-50, 240)
+pendown()
+skinSquare()
+
+penup()
+goto(-20, 240)
+pendown()
+skinSquare()
+
+penup()
+goto(10, 240)
+pendown()
+blackSquare()
+
+penup()
+goto(40, 240)
+pendown()
+skinSquare()
+
+penup()
+goto(100, 270)
+pendown()
+redSquare()
+
+penup()
+goto(70, 270)
+pendown()
+redSquare()
+
+penup()
+goto(40, 270)
+pendown()
+redSquare()
+
+penup()
+goto(10, 270)
+pendown()
+redSquare()
+
+penup()
+goto(-20, 270)
+pendown()
+redSquare()
+
+penup()
+goto(-50, 270)
+pendown()
+redSquare()
+
+penup()
+goto(-50, 300)
+pendown()
+redSquare()
+
+penup()
+goto(-20, 300)
+pendown()
+redSquare()
+
+penup()
+goto(10, 300)
+pendown()
+redSquare()
+
+penup()
+goto(-80, 300)
+pendown()
+redSquare()
+
+penup()
+goto(-110, 300)
+pendown()
+redSquare()
+
+penup()
+goto(-140, 300)
+pendown()
+redSquare()
+
+penup()
+goto(-80, 270)
+pendown()
+redSquare()
+
+penup()
+goto(-110, 270)
+pendown()
+redSquare()
+
+penup()
+goto(-140, 270)
+pendown()
+redSquare()
+
+penup()
+goto(-170, 270)
+pendown()
+redSquare()
+
+penup()
+goto(-170, 240)
+pendown()
+brownSquare()
+
+penup()
+goto(-140, 240)
+pendown()
+brownSquare()
+
+penup()
+goto(-110, 240)
+pendown()
+brownSquare()
+
+penup()
+goto(-80, 240)
+pendown()
+skinSquare()
+
+
+penup()
+goto(-80, 210)
+pendown()
+skinSquare()
+
+
+penup()
+goto(-110, 210)
+pendown()
+skinSquare()
+
+
+penup()
+goto(-140, 210)
+pendown()
+brownSquare()
+
+
+penup()
+goto(-170, 210)
+pendown()
+skinSquare()
+
+
+penup()
+goto(-200, 210)
+pendown()
+brownSquare()
+
+
+penup()
+goto(-200, 180)
+pendown()
+brownSquare()
+
+penup()
+goto(-170, 180)
+pendown()
+skinSquare()
+
+penup()
+goto(-140, 180)
+pendown()
+brownSquare()
+
+penup()
+goto(-110, 180)
+pendown()
+brownSquare()
+
+penup()
+goto(-80, 180)
+pendown()
+skinSquare()
+
+penup()
+goto(-80, 180)
+pendown()
+skinSquare()
+
+penup()
+goto(-80, 150)
+pendown()
+skinSquare()
+
+penup()
+goto(-110, 150)
+pendown()
+skinSquare()
+
+penup()
+goto(-140, 150)
+pendown()
+skinSquare()
+
+penup()
+goto(-170, 150)
+pendown()
+brownSquare()
+
+penup()
+goto(-200, 150)
+pendown()
+brownSquare()
+
+penup()
+goto(-140, 120)
+pendown()
+skinSquare()
+
+penup()
+goto(-110, 120)
+pendown()
+skinSquare()
+
+penup()
+goto(-80, 120)
+pendown()
+skinSquare()
+
+penup()
+goto(-80, 90)
+pendown()
+redSquare()
+
+penup()
+goto(-110, 90)
+pendown()
+blueSquare()
+
+penup()
+goto(-140, 90)
+pendown()
+redSquare()
+
+penup()
+goto(-170, 90)
+pendown()
+redSquare()
+
+penup()
+goto(-200, 60)
+pendown()
+redSquare()
+
+penup()
+goto(-170, 60)
+pendown()
+redSquare()
+
+penup()
+goto(-140, 60)
+pendown()
+redSquare()
+
+penup()
+goto(-110, 60)
+pendown()
+blueSquare()
+
+penup()
+goto(-80, 60)
+pendown()
+redSquare()
+
+penup()
+goto(-80, 30)
+pendown()
+blueSquare()
+
+penup()
+goto(-110, 30)
+pendown()
+blueSquare()
+
+penup()
+goto(-140, 30)
+pendown()
+redSquare()
+
+penup()
+goto(-170, 30)
+pendown()
+redSquare()
+
+penup()
+goto(-200, 30)
+pendown()
+redSquare()
+
+penup()
+goto(-230, 30)
+pendown()
+redSquare()
+
+penup()
+goto(-230, 0)
+pendown()
+skinSquare()
+
+penup()
+goto(-200, 0)
+pendown()
+skinSquare()
+
+penup()
+goto(-170, 0)
+pendown()
+redSquare()
+
+penup()
+goto(-140, 0)
+pendown()
+blueSquare()
+
+penup()
+goto(-110, 0)
+pendown()
+yellowSquare()
+
+penup()
+goto(-80, 0)
+pendown()
+blueSquare()
+
+penup()
+goto(-80, -30)
+pendown()
+blueSquare()
+
+penup()
+goto(-110, -30)
+pendown()
+blueSquare()
+
+penup()
+goto(-140, -30)
+pendown()
+blueSquare()
+
+penup()
+goto(-170, -30)
+pendown()
+skinSquare()
+
+penup()
+goto(-200, -30)
+pendown()
+skinSquare()
+
+penup()
+goto(-230, -30)
+pendown()
+skinSquare()
+
+penup()
+goto(-230, -60)
+pendown()
+skinSquare()
+
+penup()
+goto(-200, -60)
+pendown()
+skinSquare()
+
+penup()
+goto(-170, -60)
+pendown()
+blueSquare()
+
+penup()
+goto(-140, -60)
+pendown()
+blueSquare()
+
+penup()
+goto(-110, -60)
+pendown()
+blueSquare()
+
+penup()
+goto(-80, -60)
+pendown()
+blueSquare()
+
+penup()
+goto(-110, -90)
+pendown()
+blueSquare()
+
+penup()
+goto(-140, -90)
+pendown()
+blueSquare()
+
+penup()
+goto(-170, -90)
+pendown()
+blueSquare()
+
+penup()
+goto(-140, -120)
+pendown()
+brownSquare()
+
+penup()
+goto(-170, -120)
+pendown()
+brownSquare()
+
+penup()
+goto(-200, -120)
+pendown()
+brownSquare()
+
+penup()
+goto(-230, -150)
+pendown()
+brownSquare()
+
+penup()
+goto(-200, -150)
+pendown()
+brownSquare()
+
+penup()
+goto(-170, -150)
+pendown()
+brownSquare()
+
+penup()
+goto(-140, -150)
+pendown()
+brownSquare()
+
+exitonclick()
