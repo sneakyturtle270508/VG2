@@ -2,11 +2,11 @@
 # @Author: William Berge Groensberg
 # @Date:   2025-09-24 09:24:00
 # @Last Modified by:   William Berge Groensberg
-# @Last Modified time: 2025-09-24 13:25:38
+# @Last Modified time: 2025-09-24 14:22:06
 import turtle
 from turtle import *
 
-speed(0)
+speed(10)
 
 
 def redSquare():
@@ -37,7 +37,7 @@ def yellowSquare():
 
 
 def skinSquare():
-    fillcolor("sandybrown")
+    fillcolor("saddlebrown")
     begin_fill()
     for i in range(4):
         forward(30)
@@ -46,7 +46,7 @@ def skinSquare():
 
 
 def brownSquare():
-    fillcolor("saddlebrown")
+    fillcolor("black")
     begin_fill()
     for i in range(4):
         forward(30)
@@ -289,7 +289,7 @@ pendown()
 skinSquare()
 
 penup()
-goto(1000, 120)
+goto(10, 120)
 pendown()
 skinSquare()
 
