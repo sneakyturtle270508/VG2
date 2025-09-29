@@ -2,7 +2,7 @@
 # # @Author: William Berge Groensberg
 # # @Date:   2025-09-16 08:40:49
 # # @Last Modified by:   William Berge Groensberg
-# # @Last Modified time: 2025-09-26 12:14:22
+# # @Last Modified time: 2025-09-26 12:31:15
 
 
 
@@ -27,7 +27,7 @@ betaltPris = int(input("hva betaler du: "))
 
 
 # lag variabel sjekkerIgjen og giv den verdi kjopePris % betaltPris
-sjekkerIgjen = betaltPris % kjopePris
+sjekkerIgjen = betaltPris - kjopePris
 
 # Lærer: Skriv gjerne her hvor mye totalt (sjekkerIgjen) kunden skal få tilbake.
 
@@ -83,7 +83,8 @@ print(f"{penger['1']} en krone(r)")
 #        Dersom kunden bare skulle hatt tilbake 1 krone, vil programmet ditt
 #        likevel kjøre gjennom kalkulasjonene for hver eneste myntenhet fra kr 1000 til kr 1.
 #        Kunne dette vært løst noe mer effektivt der du også faktisk kun printer myntenheter
-#        kunden skal ha tilbake? ja det kan være løst bedre, men jeg dette var den letteste jeg kom fram til.
+#        kunden skal ha tilbake? ja det kan være løst bedre, men jeg dette var den letteste jeg kom fram til. 
+#        jeg kunne løst det med mangen if settninger for å sjekke om hver verdi passer i resterende
 
 
 

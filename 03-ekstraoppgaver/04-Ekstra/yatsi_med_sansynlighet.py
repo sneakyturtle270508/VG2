@@ -2,18 +2,19 @@
 # @Author: William Berge Groensberg
 # @Date:   2025-09-05 19:57:19
 # @Last Modified by:   William Berge Groensberg
-# @Last Modified time: 2025-09-05 20:43:54
+# @Last Modified time: 2025-09-26 13:19:34
 
 # -*- coding: utf-8 -*-
 # @Author: William Berge Groensberg
 # @Date:   2025-08-29 14:37:59
 # @Last Modified by:   William Berge Groensberg
 # @Last Modified time: 2025-09-05 20:27:35
-
 # importer random
 # importer time
 import random
 import time
+
+
 
 antall_simuleringer = int(input("Hvor mange ganger vil du prøve å få Yatzy? "))
 totale_kast = 0
@@ -21,10 +22,12 @@ totale_kast = 0
 # print prøv å få Yatzy med 5 terninger!
 print("prøv å få Yatzy med 5 terninger!")
 
+
 for i in range(antall_simuleringer):
     antall_forsok = 0
     # mens vi ikke har fått Yatzy: #løkke uten autoinkrement så den stopper ikke
     while True:
+
     #     Øk antall_forsøk med 1
         antall_forsok += 1
     #     Be bruker trykke Enter for å trille
