@@ -56,4 +56,4 @@ print(f"her er det mest optimale {storstVerdi}")
 
 
 # Lærer: Veldig bra og godt dokumentert, William. Her har du også fått med hva som må skje 
-#        i while-løkka
+#        i while-løkka.
