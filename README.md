@@ -201,6 +201,4 @@ The progression shows mastery of fundamental concepts and readiness for advanced
 ## 📞 Contact
 
 **William Berge Groensberg**  
-*Student of Python Programming*
-
 Feel free to explore the code and see my progression from basic Python concepts to complete interactive games! 🚀
