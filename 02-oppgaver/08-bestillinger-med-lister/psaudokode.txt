@@ -1,0 +1,76 @@
+
+lag listen ukedager og legg til alle ukedager
+lag listen bestillinger 
+lag variabelen lengde og gi verdi 7
+
+
+lag funksjonen listeHenting
+    lag en løkke som er like lang som ukedager 
+        print en ukedag
+        ta imot input fra bruker og legg til det bakerst i listen
+    lag en løkke som går i 
+    
+
+lag funksjonen hoyestBestillingsDag
+    lag variabelen storstBestillingsDag
+    lag variabelen listeIndex
+
+    lag funksjonen maxOgDag
+        legg til listen med ukedager
+        lag variabelen index og giv verdi none
+        lag max og giv verdi bestilinger[0] for å starte på starten av listen
+       
+        !denne gir maxTallet!
+
+        lag en løkke som går igjennom listen med bestilinger
+            hvis teller er større en max 
+                gi max verdi til teller
+
+
+        lag en løkke som går i lengde
+            hvis bestilinger[i] == maxTallet
+                index = i
+
+        print dagen med flest bestillinger var ukedager[i] med bestillinger[i] bestillinger
+    
+        returner verdien
+
+
+
+print maxOgDag() 
+
+  
+lag funksjonen overGjennomsnitt
+
+    lag variabelen sum
+
+
+    lag en løkke som går i gjennom lengden av bestilinger
+        pluss verdien fra bestillinger[i] med sum
+
+    lag variabelen gjennomsnitt og gi den verdi sum / lengde
+
+
+
+    lag en løkke som går i lengde
+        hvis bestilinger[i] == maxTallet
+            index = i
+    
+    
+
+
+
+    
+
+
+
+
+
+
+
+
+
+    lag funksjonen gjennomsnitt
+        gi verdi sum(bestillinger) / len(bestillinger)
+    
+

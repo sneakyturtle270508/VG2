@@ -2,7 +2,7 @@
 # @Author: William Berge Groensberg
 # @Date:   2025-09-18 14:12:06
 # @Last Modified by:   William Berge Groensberg
-# @Last Modified time: 2025-09-24 10:59:45
+# @Last Modified time: 2025-10-17 13:33:17
 
 import random
 import time
@@ -10,7 +10,7 @@ import os
 
 # ------------------------------
 # Pengebeholdning
-pengebok = 100
+pengebok = 1000
 
 # ------------------------------
 # Kortstokk
