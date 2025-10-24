@@ -1,107 +1,189 @@
-﻿# VG2 It
+# VG2 IT - Python Programming Portfolio
 
-A collection of Python exercises and projects from my programming course, showcasing fundamental programming concepts and problem-solving skills.
+A comprehensive collection of Python exercises and projects from my programming course, showcasing progression from fundamental concepts to advanced applications including games, networking, and automation.
 
 **Author:** William Berge Groensberg  
-**Course:** Python Programming Fundamentals
+**Course:** Programming (VG2) 
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
-📦 Python-School-Projects
-├── 01-ovelser/           # Basic exercises and concepts
-├── 02-oppgaver/          # Core assignments
-├── 03-ekstraoppgaver/    # Extra challenges and games
-└── 04-egen_ovelse/       # Self-practice and advanced projects
+VG2-IT-Python-Projects
+├── 02-oppgaver/              # Core curriculum assignments (9 projects)
+├── 03-ekstraoppgaver/        # Extra challenges and games (8 projects)
+├── 04-egen_ovelse/           # Self-practice and advanced projects (8 projects)
+└── README.md                 # This file
 ```
 
 ---
 
-## 🎯 Learning Objectives
+## Learning Objectives
 
-This repository demonstrates proficiency in:
+This repository demonstrates comprehensive proficiency in:
 
-- **Variables and Data Types** - Working with strings, integers, floats, lists, and dictionaries
-- **User Input/Output** - Interactive programs with `input()` and `print()`
-- **Conditional Logic** - `if`, `elif`, `else` statements and complex decision trees
-- **Type Conversion** - Converting between different data types
-- **Loops** - `for` and `while` loops for repetitive tasks and game mechanics
-- **Random Numbers** - Using the `random` module for games and simulations
-- **Functions** - Creating reusable code blocks and modular programming
-- **Data Structures** - Working with lists, sets, and dictionaries
-- **ASCII Art** - Creating visual representations and enhanced user interfaces
-- **Game Development** - Complete interactive games with win conditions
-- **Algorithm Design** - Implementing game logic and win detection systems
+### Core Programming Concepts
+- **Variables and Data Types** - Strings, integers, floats, lists, dictionaries, sets
+- **User Input/Output** - Interactive programs with validation and error handling
+- **Conditional Logic** - Complex decision trees with if/elif/else statements
+- **Type Conversion** - Dynamic type handling and casting
+- **Loops** - For loops, while loops, nested iterations, and break/continue
+- **Functions** - Modular programming with parameters and return values
+- **File Operations** - Reading/writing files, CSV parsing, file monitoring
 
----
-
-## 📚 Project Highlights
-
-### 🔄 **01-ovelser** - Foundation Exercises
-- **Hello World** (`hello.py`) - First Python program with variables and output
-- **If Statements** (`if-setninger.py`) - Age verification with conditional logic
-- **User Input** (`bruker-input.py`) - Interactive age checking program
-- **Type Conversion** (`konvertering.py`) - Converting between strings, integers, and floats
-- **Increment Operations** (`inkrement.py`) - Variable manipulation and increment operators
-- **Loops** (`for_loop.py`, `while_loop.py`) - Mastering repetitive operations
-- **Mathematical Operations** (`pseudokode_regning.py`) - Arithmetic and operator precedence
-
-### 📋 **02-oppgaver** - Core Assignments
-- **Cup Swap** (`kopp.py`) - Variable swapping algorithm with temporary storage
-- **Age Comparison** (`opg.py`) - Compare ages of two people (Henrik and Kari)
-- **Interactive Quiz** (`opg.py`) - 10-question quiz with scoring system and feedback
-- **Multiplication Tables** (`opg_for_loops.py`) - Dynamic table generation using loops
-- **Number Guessing Game** (`opg.py`) - Random number guessing with hints and attempt tracking
-- **Currency Exchange** (`opg.py`) - Bill denomination calculator using modulo operations
-
-### 🎮 **03-ekstraoppgaver** - Interactive Games & Challenges
-- **Math Quiz Game** (`OPG.PY`) - 10-question multiplication quiz with scoring system
-- **Dice Roll Challenge** (`terning.py`) - Keep rolling until you get a 6
-- **Double Dice Game** (`opg.py`) - Roll two dice until you get matching numbers
-- **Yatzy Challenge** (`opg.py`) - Roll 5 dice until all show the same number
-  - Includes enhanced version with ASCII art dice visualization
-  - Statistical analysis version for probability calculations
-
-### 🧪 **04-egen_ovelse** - Advanced Self-Practice
-- **🎯 Tic Tac Toe** (`ticTacToe.py`) - Complete two-player game with win detection
-- **🃏 Blackjack** (`blackjack.py`) - Card game with ASCII art and proper Ace handling
-- **Data Types Reference** (`cheatsheet.py`) - Comprehensive Python syntax guide
+### Advanced Topics
+- **Data Structures** - Lists, dictionaries, sets, tuples for efficient data management
+- **Algorithm Design** - Sorting, searching, optimization, game logic
+- **Database Management** - Relational databases, table design, normalization
+- **Network Programming** - Client-server architecture, UDP broadcasting, TCP connections
+- **Threading** - Concurrent operations for real-time applications
+- **Game Development** - Complete game loops, state management, AI opponents
+- **ASCII Art** - Visual programming and enhanced user interfaces
+- **Random Numbers** - Probability, simulations, and procedural generation
+- **Mathematical Operations** - Formulas, calculations, statistical analysis
+- **Automation** - File organization, monitoring systems, scheduled tasks
 
 ---
 
-## 🎲 Featured Projects
+## Detailed Project Overview
 
-### 🃏 Blackjack Card Game
-A fully functional Blackjack game with professional features:
-- **Complete 52-card deck** with proper shuffling
-- **Beautiful ASCII art cards** with suits (♠ ♥ ♦ ♣)
-- **Smart Ace handling** - automatically adjusts between 1 and 11
-- **Realistic card values** - Face cards worth 10, Aces flexible
-- **Interactive gameplay** - Hit or Stand decisions
-- **Bust detection** - Automatic game over when exceeding 21
-- **Visual hand display** - See your cards laid out beautifully
+### **02-oppgaver** - Core Curriculum (10 Projects)
 
+#### 1. **Cup Swap** (`01 - Bytt kopper/`)
+Variables and value swapping using temporary storage
 ```python
-# Example card display
-┌───────┐  ┌───────┐
-|K♠     |  |A♥     |
-|   ♠   |  |   ♥   |
-|     ♠K|  |     ♥A|
-└───────┘  └───────┘
-
-Total verdi: 21
+blakopp = "bla_tusj"
+rodkopp = "rod_tusj"
+# Swap using temporary variable
 ```
 
-### 🎯 Tic Tac Toe Strategy Game
-Strategic two-player Tic Tac Toe with advanced features:
-- **Dynamic game board** - Visual 3x3 grid with clear position markers
-- **Win detection system** - Checks all 8 possible winning combinations
-- **Input validation** - Prevents invalid moves and overwrites
-- **Turn management** - Alternates between Player 1 (X) and Player 2 (O)
-- **Real-time tracking** - Shows each player's chosen positions
-- **Smart data structures** - Uses sets for efficient win condition checking
+#### 2. **Age Comparison** (`02-hvem-er-eldst/`)
+Conditional logic comparing two people's ages
+- User input validation
+- If/elif/else decision making
+- Clear output formatting
+
+#### 3. **Interactive Quiz** (`03-quiz/`)
+10-question quiz system with scoring
+- Input validation
+- Score tracking
+- Multiple implementations (basic and enhanced with ASCII boxes)
+- Feedback system
+
+#### 4. **Multiplication Tables** (`04-Gangetabell/`)
+Dynamic multiplication table generator
+- For loop implementation
+- User-defined ranges
+- Formatted output display
+
+#### 5. **Number Guessing Game** (`05-tippespill/`)
+Random number guessing with hints
+- Random number generation
+- While loop implementation
+- Attempt counter
+- Two versions: with and without True in condition
+
+#### 6. **Currency Exchange** (`06-veksleren/`)
+Bill denomination calculator using dictionaries
+- Modulo operations for change calculation
+- Dictionary data structure
+- Efficient denomination breakdown
+
+#### 7. **Box Volume Optimizer** (`07-volum_paa_eske/`)
+Mathematical optimization problem
+- Function creation
+- While loop optimization
+- Formula implementation (volume calculation)
+- Finding maximum value through iteration
+
+#### 8. **Order Management** (`08-bestillinger-med-lister/`)
+Weekly order tracking system
+- List operations (append, index, max)
+- Statistical calculations (sum, average)
+- Data analysis and reporting
+- Multiple list manipulation
+
+#### 9. **Database Management** (Access DB)
+Employee database system using Microsoft Access
+- Table design with multiple data types
+- Fields: ansattID, fornavn, etternavn, dato_startet, loensnivaa
+- Primary key implementation
+- Data entry and validation
+- Query design and filtering
+- Relational database concepts
+- Database normalization principles
+
+**Skills Demonstrated:**
+- SQL fundamentals
+- Database schema design
+- Data types (AutoNumber, Text, Date, Currency)
+- Table relationships
+- Query creation
+
+---
+
+### **03-ekstraoppgaver** - Extra Challenges (8 Projects)
+
+#### 1. **Math Quiz Game** (`01-Ekstra/`)
+Interactive multiplication quiz
+- 10 random multiplication problems
+- Score tracking
+- Time delays for better UX
+- Performance feedback based on score
+
+#### 2. **Dice Roll Challenge** (`02-Ekstra/`)
+Keep rolling until you get a 6
+- Random dice simulation
+- Attempt counting
+- User interaction (press Enter)
+
+#### 3. **Double Dice Game** (`03-Ekstra/`)
+Roll two dice until matching numbers
+- Multiple random variables
+- Comparison logic
+- Visual feedback
+
+#### 4. **Yatzy Challenge** (`04-Ekstra/`)
+Roll 5 dice until all match
+- **Three versions:**
+  1. Basic version with attempt counter
+  2. Enhanced with ASCII art dice visualization
+  3. Statistical probability calculator version
+- Advanced comparison logic (5-way equality)
+
+#### 5. **Party Planner** (`05-Ekstra/`)
+Calculate hot dogs and buns needed
+- Mathematical calculations
+- `math.ceil()` for rounding up
+- Practical problem solving
+
+#### 6. **Geometry Calculator** (`07-Ekstra/`)
+Calculate areas of various shapes
+- Functions for each shape
+- Circle calculations with `math.pi`
+- Multiple return values
+- Formulas: square, rectangle, triangle, parallelogram, rhombus, trapezoid, circle
+
+#### 7. **Pixel Art Creator** (`08-Exstra/`)
+Create pixel art using turtle graphics
+- Turtle graphics library
+- Coordinate system
+- Color management
+- Pattern creation
+
+---
+
+### **04-egen_ovelse** - Advanced Self-Practice (8 Projects)
+
+#### 1. **Tic Tac Toe** (`01-tic-tac-toe/`)
+Complete two-player strategy game
+- Dynamic 3x3 game board
+- Win detection (8 possible combinations)
+- Input validation and illegal move prevention
+- Turn management system
+- Set-based win condition checking
+- Real-time position tracking
 
 ```python
 # Game board display
@@ -110,96 +192,371 @@ Strategic two-player Tic Tac Toe with advanced features:
 4 | 5 | 6
 --+---+--
 7 | 8 | 9
+```
 
-Spiller 1: [1, 5]
-Spiller 2: [2, 3]
+#### 2. **Blackjack** (`02-Blackjack/`)
+Professional casino card game
+- Complete 52-card deck implementation
+- Beautiful ASCII art cards with suits (♠ ♥ ♦ ♣)
+- Smart Ace handling (1 or 11)
+- Realistic card values
+- Dealer AI with strategy
+- Flip animation for dealer's hidden card
+- Virtual money system with betting
+- Hit/Stand mechanics
+
+```python
+┌───────┐  ┌───────┐
+|K♠     |  |A♥     |
+|   ♠   |  |   ♥   |
+|     ♠K|  |     ♥A|
+└───────┘  └───────┘
+Total: 21 - BLACKJACK!
+```
+
+#### 3. **LAN Chat System** (`03-chat-system/`)
+Advanced networked chat application
+- **Server Features:**
+  - UDP broadcast for automatic discovery
+  - TCP connections for chat
+  - Room-based chat with PIN codes
+  - Server administration dashboard
+  - User kick/ban capabilities
+  - Activity logging
+  - Server states (active/standby/stopped)
+- **Client Features:**
+  - Automatic server discovery
+  - Multiple server selection
+  - Reconnection handling
+  - Clean disconnect
+- Complete documentation included
+
+#### 4. **Even Number Checker** (`04-sjekke-partall/`)
+Simple modulo operation example
+- Input validation
+- Modulo arithmetic (% 2)
+- Even/odd determination
+
+#### 5. **Number System Converter** (`05-hex-to-bin/`)
+Multi-format number converter
+- 6 conversion modes:
+  1. Binary → Hexadecimal
+  2. Hexadecimal → Binary
+  3. Integer → Binary
+  4. Binary → Integer
+  5. Integer → Hexadecimal
+  6. Hexadecimal → Integer
+- Menu-driven interface
+- Input validation
+
+#### 6. **Smart File Organizer** (`06-fil-sorterer/`)
+Automated file organization system
+- Automatic course folder detection
+- File monitoring with `watchdog` library
+- Date-based file numbering
+- Dynamic reorganization
+- Prevents conflicts during editing
+- Course name extraction from filenames
+- Real-time file system monitoring
+
+#### 7. **Matrix Effect** (`07-matrix/`)
+Classic Matrix digital rain effect
+- Random character generation
+- Terminal color formatting
+- Continuous animation loop
+- Visual programming demonstration
+
+#### 8. **CSV to ICS Converter** (`08-csv-to-ice/`)
+School schedule converter
+- CSV parsing
+- ICS (iCalendar) format generation
+- Date/time formatting
+- Multi-event handling
+- Import into calendar applications
+
+---
+
+## Featured Advanced Projects
+
+### LAN Chat System - Multi-User Networking
+A production-ready chat system with enterprise features:
+
+**Server Capabilities:**
+- Automatic discovery via UDP broadcast
+- Multi-room support with PIN-based access
+- Real-time user management
+- Administrative controls (kick, ban, close rooms)
+- Activity logging with configurable history
+- Three operational states: active, standby, stopped
+- Thread-safe operations with locking mechanisms
+- Graceful shutdown and cleanup
+
+**Client Features:**
+- Zero-configuration server discovery
+- Multi-server support (choose from discovered servers)
+- Automatic reconnection after network issues
+- Clean disconnect with `/stop` command
+- Real-time message delivery
+- Connection status monitoring
+
+**Technical Implementation:**
+```python
+# Server broadcasts presence
+sock.sendto(b"SERVER_HERE", addr)
+
+# Client discovers servers
+data, addr = client.recvfrom(1024)
+if data.decode("utf-8") == "SERVER_HERE":
+    servers.append(addr[0])
+```
+
+### Smart File Organizer - Automation System
+Intelligent file organization with real-time monitoring:
+
+**Features:**
+- Automatic course folder creation from filenames
+- Date-based file numbering (oldest = 00)
+- Real-time file system monitoring with `watchdog`
+- Smart waiting to avoid conflicts during file creation
+- Batch reorganization when old files are added
+- Prefix extraction and cleanup
+- Cross-platform compatibility
+
+**Use Case:**
+```
+Input: "matte_oppgave.pdf" (created Sept 1)
+       "matte_test.pdf" (created Sept 15)
+       "matte_notater.pdf" (created Sept 5)
+
+Output: matte/
+        ├── 00_oppgave.pdf (Sept 1)
+        ├── 01_notater.pdf (Sept 5)
+        └── 02_test.pdf (Sept 15)
+```
+
+### Blackjack - Professional Game Development
+Casino-quality card game with all features:
+
+**Advanced Features:**
+- Proper deck management with shuffling
+- Visual card representations with Unicode suits
+- Dealer flip animation (card reveal effect)
+- Smart Ace logic (automatic 1/11 switching)
+- Betting system with virtual currency
+- Dealer AI following house rules
+- Multiple game states (betting, playing, dealer turn, results)
+- Clean game loop with replay option
+
+---
+
+## Programming Patterns & Best Practices
+
+### Code Organization
+```python
+# Modular design with functions
+def create_deck():
+    """Generate and shuffle a 52-card deck"""
+    suits = ['♠', '♥', '♦', '♣']
+    values = ['2','3',...,'A']
+    return [v + s for v in values for s in suits]
+
+# Clear separation of concerns
+# - Game logic in functions
+# - Display logic separate
+# - Input validation isolated
+```
+
+### Error Handling
+```python
+# Robust input validation
+try:
+    choice = int(input("Choose: "))
+    if 1 <= choice <= 6:
+        return choice
+except ValueError:
+    print("Invalid input!")
+```
+
+### Data Structures
+```python
+# Efficient win detection in Tic Tac Toe
+winning_combo = [
+    {1,2,3}, {4,5,6}, {7,8,9},  # Rows
+    {1,4,7}, {2,5,8}, {3,6,9},  # Columns
+    {1,5,9}, {3,5,7}            # Diagonals
+]
+# Check win with set operations
+if any(combo.issubset(player1) for combo in winning_combo):
+    return True
 ```
 
 ---
 
-## 🚀 How to Run
+## How to Run
 
-1. **Clone the repository:**
-   ```bash
-   git clone <repository-url>
-   cd python-school-projects
-   ```
+### Basic Programs
+```bash
+# Clone the repository
+git clone <repository-url>
+cd vg2-it-python
 
-2. **Run any program:**
-   ```bash
-   python path/to/file.py
-   ```
+# Run any basic program
+python "02-oppgaver/03-quiz/opg.py"
+```
 
-3. **Featured Games:**
-   ```bash
-   # Play Blackjack
-   python "04-egen_ovelse/02-Blackjack/blackjack.py"
-   
-   # Play Tic Tac Toe
-   python "04-egen_ovelse/01-tic-tac-toe/ticTacToe.py"
-   ```
+### Featured Games
+```bash
+# Play Blackjack (requires terminal with Unicode support)
+python "04-egen_ovelse/02-Blackjack/blackjack.py"
 
----
+# Play Tic Tac Toe
+python "04-egen_ovelse/01-tic-tac-toe/ticTacToe.py"
 
-## 💡 Programming Concepts Demonstrated
+# Run Yatzy with probability analysis
+python "03-ekstraoppgaver/04-Ekstra/yatsi_med_sansynlighet.py"
+```
 
-| Concept | Files | Description |
-|---------|--------|-------------|
-| **Variables & Assignment** | `hello.py`, `kopp.py` | Basic variable creation and manipulation |
-| **User Input & Validation** | Most files | Interactive programs with input validation |
-| **Conditionals** | `if-setninger.py`, games | Decision making with complex logic |
-| **Loops** | `for_loop.py`, `while_loop.py` | For loops, while loops, and game loops |
-| **Functions** | `blackjack.py` | Modular programming and code reuse |
-| **Data Structures** | `ticTacToe.py` | Lists, sets, and dictionaries |
-| **Random Numbers** | Games in `03-ekstraoppgaver/` | Using `random` module for gameplay |
-| **Type Conversion** | `konvertering.py` | Converting between data types |
-| **String Formatting** | All games | F-strings and string manipulation |
-| **ASCII Art** | `blackjack.py`, `nam.py` | Visual programming and user interfaces |
-| **Algorithm Design** | `ticTacToe.py` | Win detection and game state management |
+### Advanced Projects
+```bash
+# Start LAN Chat Server
+python "04-egen_ovelse/03-chat-system/server.py"
+
+# Connect as client (in another terminal)
+python "04-egen_ovelse/03-chat-system/client.py"
+
+# Run file organizer (configure path first)
+python "04-egen_ovelse/06-fil-sorterer/main.py"
+```
 
 ---
 
-## 🏆 Skills Developed
+## Skills Progression Map
 
-- **Problem Solving** - Breaking down complex problems into smaller, manageable steps
-- **Algorithm Design** - Creating efficient win detection and game logic systems
-- **Code Organization** - Using functions and modular programming principles
-- **User Experience** - Creating engaging, visually appealing interactive programs
-- **Data Structure Mastery** - Efficient use of lists, sets, and dictionaries
-- **Input Validation** - Robust error handling and user input verification
-- **Game Development** - Complete game loops, state management, and player interaction
-- **Documentation** - Writing clear comments and comprehensive pseudocode
-- **Testing & Debugging** - Systematic approach to finding and fixing issues
+| Level | Skills | Projects |
+|-------|--------|----------|
+| **Beginner** | Variables, I/O, Conditionals | Cup Swap, Age Comparison |
+| **Intermediate** | Loops, Functions, Lists | Quiz, Guessing Game, Order Management |
+| **Advanced** | Algorithms, Data Structures | Tic Tac Toe, Blackjack, Converters |
+| **Expert** | Networking, Threading, Automation | Chat System, File Organizer |
 
 ---
 
-## 📝 Code Style & Comments
+## Concepts Mastered
 
-All code includes:
-- **Norwegian comments** - Written in native language for better understanding
-- **Detailed pseudocode** - Planning phase visible in `.txt` files
-- **Clear variable names** - Self-documenting code with meaningful identifiers
-- **Consistent formatting** - Professional code structure and indentation
-- **Modular design** - Functions and organized code blocks
-- **Error handling** - Input validation and edge case management
+### Fundamental Programming
+- ✅ Variables and data types (all types)
+- ✅ User input with validation
+- ✅ Type conversion and casting
+- ✅ Conditional statements (if/elif/else)
+- ✅ Loops (for, while, nested)
+- ✅ Functions with parameters and returns
+- ✅ String manipulation and formatting
+
+### Data Structures
+- ✅ Lists (creation, indexing, methods)
+- ✅ Dictionaries (key-value pairs)
+- ✅ Sets (for unique collections)
+- ✅ Tuples (immutable sequences)
+- ✅ List comprehensions
+
+### Advanced Techniques
+- ✅ File I/O operations
+- ✅ Random number generation
+- ✅ Mathematical calculations
+- ✅ Algorithm implementation
+- ✅ Network programming (sockets, TCP/UDP)
+- ✅ Multi-threading
+- ✅ Event-driven programming
+- ✅ File system monitoring
+- ✅ ASCII art and visualization
+
+### Software Engineering
+- ✅ Modular code organization
+- ✅ Error handling and validation
+- ✅ Documentation and comments
+- ✅ Code reusability
+- ✅ Testing and debugging
+- ✅ Version control awareness
+- ✅ Database design and management
+- ✅ SQL and relational databases
 
 ---
 
-## 🎓 Course Progress
+## Code Quality Standards
 
-This repository represents my journey learning Python programming, from basic "Hello World" to sophisticated games like Blackjack and Tic Tac Toe. Each project builds upon previous concepts while introducing advanced programming techniques like:
+All projects demonstrate:
 
-- **Object-oriented thinking** through card and game representations
-- **Algorithm implementation** for win detection and game logic
-- **User interface design** with ASCII art and interactive elements
-- **Data structure optimization** for efficient game state management
+- **Norwegian Comments** - Native language for educational clarity
+- **Pseudocode Planning** - Visible in `.txt` files showing thought process
+- **Meaningful Names** - Self-documenting variable and function names
+- **Consistent Style** - Professional formatting and indentation
+- **Modular Design** - Functions and organized code blocks
+- **Input Validation** - Robust error handling for user input
+- **Teacher Feedback** - Inline comments showing instructor guidance
+- **Progressive Complexity** - Each project builds on previous concepts
 
-The progression shows mastery of fundamental concepts and readiness for advanced programming challenges.
+### Example Code Quality
+```python
+# Clear function with documentation
+def hand_value(hand):
+    """
+    Calculate the optimal value of a blackjack hand.
+    Handles Aces intelligently (1 or 11).
+    """
+    value = 0
+    aces = 0
+    
+    for card in hand:
+        # ... implementation
+    
+    return value
+```
 
 ---
 
-## 📞 Contact
+## Project Achievements
+
+- **26+ Complete Programs** - From simple exercises to complex applications
+- **3 Full Games** - Tic Tac Toe, Blackjack, Yatzy (with variants)
+- **Network Application** - Complete client-server chat system
+- **Database System** - Employee management with Access
+- **Automation Tool** - Real-time file organization system
+- **Multiple Algorithms** - Win detection, optimization, conversion
+- **Professional UX** - ASCII art, animations, formatted output
+
+---
+
+## Future Enhancements
+
+Potential areas for expansion:
+- GUI versions using tkinter or pygame
+- Database integration for persistent data
+- Web interface for chat system
+- AI opponents for games
+- Additional file format converters
+- Mobile app versions
+
+---
+
+## Contact & Acknowledgments
 
 **William Berge Groensberg**  
+VG2 Student - IT Technology and Services  
+Telemark fylkeskommune
 
-Feel free to explore the code and see my progression from basic Python concepts to complete interactive games! 🚀
+**Special Thanks:**
+- Course instructors for detailed feedback
+- ChatGPT for LAN chat system architecture assistance (documented in readme)
+- Fellow students for testing and suggestions
+
+---
+
+## License & Usage
+
+This is an educational portfolio. Code is available for learning purposes.  
+Feel free to explore, learn from, and adapt these projects!
+
+---
+
+*Last Updated: October 2025*  
+*Repository represents continuous learning from basic Python to advanced networking and automation*
