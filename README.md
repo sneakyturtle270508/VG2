@@ -1,4 +1,4 @@
-﻿# My_python_journey
+﻿# VG2 It
 
 A collection of Python exercises and projects from my programming course, showcasing fundamental programming concepts and problem-solving skills.
 
@@ -201,4 +201,5 @@ The progression shows mastery of fundamental concepts and readiness for advanced
 ## 📞 Contact
 
 **William Berge Groensberg**  
+
 Feel free to explore the code and see my progression from basic Python concepts to complete interactive games! 🚀
