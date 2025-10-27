@@ -10,7 +10,7 @@ A comprehensive collection of Python exercises and projects from my programming 
 ## Project Structure
 
 ```
-VG2-IT-Python-Projects
+VG2-IT-Projects
 ├── 02-oppgaver/              # Core curriculum assignments (9 projects)
 ├── 03-ekstraoppgaver/        # Extra challenges and games (8 projects)
 ├── 04-egen_ovelse/           # Self-practice and advanced projects (8 projects)
@@ -560,3 +560,4 @@ Feel free to explore, learn from, and adapt these projects!
 
 *Last Updated: October 2025*  
 *Repository represents continuous learning from basic Python to advanced networking and automation*
+
