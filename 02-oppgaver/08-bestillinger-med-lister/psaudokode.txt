@@ -59,7 +59,7 @@ lag funksjonen overGjennomsnitt
     
 
 
-
+# Lærer: Det ser ut til at logikken er er riktig.
     
 
 

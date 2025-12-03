@@ -21,7 +21,7 @@ def maxOgDag(l):
     index = None
     maks = 0
 
-    for teller in l:
+    for teller in l:            # Lærer: Hadde du trengt to for-løkker i denne funksjonen?
         if teller > maks:
             maks = teller
 
@@ -29,14 +29,18 @@ def maxOgDag(l):
         if l[i] == maks:
             index = i
         
-
+    # Lærer: Dersom du fil bruke listen "ukedager" inne i funksjonen, bør du ta denne listen inn som et parameter.
+    #        Nå er funksjonen din avhengig av at det finnes en global liste utenfor funksjonen som heter "ukedager".  
     print(f"Dagen med flest bestillinger var {ukedager[index]} med {bestillinger[index]} bestillinger")
+    # Lærer: Foreta gjerne printing til skjerm utenfor funksjonen.
     return (maks, index)
 
 
 
 #   lag funksjonen gjennomsnitt
-def overGjennomsnitt(t, l):
+def overGjennomsnitt(t, l):  # Lærer: Denne funksjonen er avhengig av at noen har kjørt funksjonen "totalBestillinger" først. Pass på
+                             #        at hver funksjon kan brukes uten at de er avhenging av andre egendefinerte funksjonen. Først da 
+                             #        kan de regnes som selvstendige.
     gjennomsnitt = t / lengde
    
 #         gi verdi sum(bestillinger) / len(bestillinger)
@@ -63,6 +67,9 @@ print(f"den totale summen av alle bestillingene er: {total}\n")
 maxOgDag(bestillinger)
 print("\n")
 overGjennomsnitt(total, bestillinger)
+
+
+# Lærer: Mye bra her, William. Se mine kommentarer i koden. 
 
 
 
