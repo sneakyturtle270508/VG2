@@ -1,586 +1,565 @@
-#  ____   _____   ____    ____    ____   _   _   _   _   _____   ____  _____
-# |  _ \ |_   _| / __ \  / __ \  / __ \ | \ | | | \ | | |_   _|/ __ \|  __ \
-# | |_) |  | |  | |  | || |  | || |  | ||  \| | |  \| |   | | | |  | | |__) |
-# |  _ <   | |  | |  | || |  | || |  | || . ` | | . ` |   | | | |  | |  _  /
-# | |_) | _| |_ | |__| || |__| || |__| || |\  | | |\  |  _| |_| |__| | | \ \
-# |____/ |_____| \____/  \____/  \____/ |_| \_| |_| \_| |_____| \____/|_|  \_\
-#
-# VG2 — Very Good 2 (placeholder name)
-#
-# Welcome to VG2. This README is written to be long, clear, and include ASCII
-# decorations while remaining valid Markdown so GitHub will render it correctly.
-#
-# Replace placeholder names (vg2, paths, command examples) with actual project
-# specifics where appropriate.
+# VG2 IT - Python Programming Portfolio
+
+A comprehensive collection of Python exercises and projects from my programming course, showcasing progression from fundamental concepts to advanced applications including games, networking, and automation.
+
+**Author:** William Berge Groensberg  
+**Course:** Programming (VG2) 
 
 ---
 
-Table of Contents
-- Project overview
-- Quick start (3-step)
-- Requirements
-- Installation (detailed)
-- Configuration
-- Usage examples
-- Project showcases ← NEW
-- Project layout / architecture
-- Running tests
-- Linting, formatting & type checking
-- Packaging & distribution
-- Continuous Integration (example)
-- Contributing
-- Issue & PR workflow
-- Troubleshooting & FAQ
-- Roadmap
-- Credits & license
-- Contact
+## Project Structure
+
+```
+VG2-IT-Projects
+├── 02-oppgaver/              # Core curriculum assignments (9 projects)
+├── 03-ekstraoppgaver/        # Extra challenges and games (8 projects)
+├── 04-egen_ovelse/           # Self-practice and advanced projects (8 projects)
+└── README.md                 # This file
+```
 
 ---
 
-Project overview
-----------------
-  ____   ____   ____   _   _  _   _   ____
- |  _ \ / __ \ / __ \ | \ | || \ | | / __ \
- | |_) | |  | | |  | ||  \| ||  \| || |  | |
- |  _ <| |  | | |  | || . ` || . ` || |  | |
- | |_) | |__| | |__| || |\  || |\  || |__| |
- |____/ \____/ \____/ |_| \_||_| \_| \____/
+## Learning Objectives
 
-VG2 is a Python project. This README is intentionally descriptive and includes
-ASCII art in several sections so it's friendly for newcomers while remaining
-practical and actionable.
+This repository demonstrates comprehensive proficiency in:
 
-Goals
-- Make it simple to get VG2 running locally
-- Provide clear examples and reproducible test instructions
-- Encourage consistent code quality and easy contributions
+### Core Programming Concepts
+- **Variables and Data Types** - Strings, integers, floats, lists, dictionaries, sets
+- **User Input/Output** - Interactive programs with validation and error handling
+- **Conditional Logic** - Complex decision trees with if/elif/else statements
+- **Type Conversion** - Dynamic type handling and casting
+- **Loops** - For loops, while loops, nested iterations, and break/continue
+- **Functions** - Modular programming with parameters and return values
+- **File Operations** - Reading/writing files, CSV parsing, file monitoring
 
-Quick start (3-step)
--------------------
-┌─────────────────────────────────────────────┐
-│ 1) Clone   2) Virtualenv   3) Install & Run  │
-└─────────────────────────────────────────────┘
+### Advanced Topics
+- **Data Structures** - Lists, dictionaries, sets, tuples for efficient data management
+- **Algorithm Design** - Sorting, searching, optimization, game logic
+- **Database Management** - Relational databases, table design, normalization
+- **Network Programming** - Client-server architecture, UDP broadcasting, TCP connections
+- **Threading** - Concurrent operations for real-time applications
+- **Game Development** - Complete game loops, state management, AI opponents
+- **ASCII Art** - Visual programming and enhanced user interfaces
+- **Random Numbers** - Probability, simulations, and procedural generation
+- **Mathematical Operations** - Formulas, calculations, statistical analysis
+- **Automation** - File organization, monitoring systems, scheduled tasks
 
-1. Clone the repo:
-```bash
-git clone https://github.com/sneakyturtle270508/VG2.git
-cd VG2
-```
+---
 
-2. Create and activate a virtual environment:
-- macOS / Linux:
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-```
-- Windows (PowerShell):
-```powershell
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-```
+## Detailed Project Overview
 
-3. Install the project in editable mode and dependencies:
-```bash
-pip install --upgrade pip
-pip install -e .
-# If requirements.txt exists:
-pip install -r requirements.txt
-```
+### **02-oppgaver** - Core Curriculum (10 Projects)
 
-Requirements
-------------
-- Python 3.8+ (adjust if your project targets a different version)
-- pip
-- Optional: Docker for containerized runs
-- Optional dev tools: pre-commit, black, flake8, mypy, pytest
-
-ASCII checklist:
-[✔] Python
-[✔] pip
-[ ] Docker (optional)
-
-Installation (detailed)
------------------------
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-: 1) Clone  : 2) Virtualenv  : 3) Install dependencies : 4) Sanity check       :
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-
-Clone and prepare environment:
-```bash
-git clone https://github.com/sneakyturtle270508/VG2.git
-cd VG2
-python3 -m venv .venv
-source .venv/bin/activate   # or Windows equivalent
-pip install -e .
-```
-
-Sanity check (optional, replace package name if different):
-```bash
-python -c "import vg2; print('VG2 imported OK')"
-```
-
-Using Docker (optional)
------------------------
-           ___
-        _/`.-'`.
-  _   /'   .-.  \
- //  .'     |  \  \
-||  /      /    |  |
-\\ /      /  .--'  /
- `      /  /____.-'
-        '--'
-
-Minimal Dockerfile example:
-```dockerfile
-FROM python:3.11-slim
-WORKDIR /app
-COPY . /app
-RUN pip install --upgrade pip \
-    && pip install -e .
-CMD ["python", "-m", "vg2"]  # replace with your project's entrypoint
-```
-
-Build & run:
-```bash
-docker build -t vg2:latest .
-docker run --rm vg2:latest
-```
-
-Configuration
--------------
-+--------------------------------------------------+
-|  ENV variables / config.yaml / config.toml       |
-+--------------------------------------------------+
-
-Two common approaches:
-1) Environment variables (via .env or system env)
-2) Config file (YAML/JSON/TOML)
-
-Example .env:
-```
-VG2_API_KEY=changeme
-VG2_DEBUG=true
-VG2_DATA_PATH=./data
-```
-
-Example config.yaml:
-```yaml
-debug: true
-api_key: "changeme"
-storage:
-  path: "./data"
-```
-
-Usage examples
---------------
-  ___________________________________
- /                                   \
-|  EXAMPLE USAGE                      |
- \___________________________________/
-
-Run as a module:
-```bash
-python -m vg2
-```
-
-Run a script:
-```bash
-python scripts/run_example.py --input data/input.json --output data/out.json
-```
-
-Use from Python:
+#### 1. **Cup Swap** (`01 - Bytt kopper/`)
+Variables and value swapping using temporary storage
 ```python
-from vg2.core import VG2Manager
-m = VG2Manager(config="config.yaml")
-m.run()
+blakopp = "bla_tusj"
+rodkopp = "rod_tusj"
+# Swap using temporary variable
 ```
 
-Project showcases
------------------
-This new section highlights concrete, copy-pasteable mini-projects and example outputs
-you can reproduce quickly. Each showcase includes a short description, steps to run,
-sample input (when necessary), expected output, and notes. Replace commands and module
-names with actual ones from your codebase if they differ.
+#### 2. **Age Comparison** (`02-hvem-er-eldst/`)
+Conditional logic comparing two people's ages
+- User input validation
+- If/elif/else decision making
+- Clear output formatting
 
-Showcase 1 — Quick demo: "Hello VG2"
------------------------------------
-A tiny demonstration showing how VG2 responds to a simple command.
+#### 3. **Interactive Quiz** (`03-quiz/`)
+10-question quiz system with scoring
+- Input validation
+- Score tracking
+- Multiple implementations (basic and enhanced with ASCII boxes)
+- Feedback system
 
-What it demonstrates
-- Basic CLI invocation
-- Simple config loading
-- Deterministic, friendly output for users and tests
+#### 4. **Multiplication Tables** (`04-Gangetabell/`)
+Dynamic multiplication table generator
+- For loop implementation
+- User-defined ranges
+- Formatted output display
 
-How to run (from project root)
-```bash
-# Ensure venv is active and package is installed
-python -m vg2 --demo
-```
+#### 5. **Number Guessing Game** (`05-tippespill/`)
+Random number guessing with hints
+- Random number generation
+- While loop implementation
+- Attempt counter
+- Two versions: with and without True in condition
 
-Expected console output (ASCII boxed):
-+----------------------------------+
-| VG2 Demo                          |
-| Status: OK                        |
-| Message: Hello, VG2 user!         |
-+----------------------------------+
+#### 6. **Currency Exchange** (`06-veksleren/`)
+Bill denomination calculator using dictionaries
+- Modulo operations for change calculation
+- Dictionary data structure
+- Efficient denomination breakdown
 
-How it works (high-level)
-- CLI parses --demo flag in vg2/cli.py
-- vg2.core.DemoRunner constructs a small message and prints to stdout
-- Use this to validate install and environment
+#### 7. **Box Volume Optimizer** (`07-volum_paa_eske/`)
+Mathematical optimization problem
+- Function creation
+- While loop optimization
+- Formula implementation (volume calculation)
+- Finding maximum value through iteration
 
-Files touched / relevant functions
-- vg2/cli.py: demo flag handling
-- vg2/core.py: DemoRunner
+#### 8. **Order Management** (`08-bestillinger-med-lister/`)
+Weekly order tracking system
+- List operations (append, index, max)
+- Statistical calculations (sum, average)
+- Data analysis and reporting
+- Multiple list manipulation
 
-Showcase 2 — Data processing pipeline
--------------------------------------
-A step-by-step example that ingests a small JSON dataset, processes it, and writes results.
+#### 9. **Database Management** (Access DB)
+Employee database system using Microsoft Access
+- Table design with multiple data types
+- Fields: ansattID, fornavn, etternavn, dato_startet, loensnivaa
+- Primary key implementation
+- Data entry and validation
+- Query design and filtering
+- Relational database concepts
+- Database normalization principles
 
-Sample input (save as sample_input.json)
-```json
-[
-  {"id": 1, "value": 3.5},
-  {"id": 2, "value": 7.2},
-  {"id": 3, "value": 1.0}
-]
-```
-
-Run the pipeline:
-```bash
-python -m vg2.process --input sample_input.json --output results.json --mode normalize
-```
-
-Expected output (results.json)
-```json
-[
-  {"id": 1, "value": 0.3278688524590164},
-  {"id": 2, "value": 0.6229508196721312},
-  {"id": 3, "value": 0.08608032786885246}
-]
-```
-
-Notes / reproducibility checklist
-- The process module reads input, normalizes numeric values, and writes output
-- Use `--mode debug` to emit verbose logs while developing
-- Unit tests should cover normalization routine with several edge cases
-
-Showcase 3 — Integration example (API request simulation)
---------------------------------------------------------
-This showcase demonstrates how VG2 can call an external API and handle responses.
-
-Simulated curl (replace URL with actual endpoint)
-```bash
-curl -s "https://api.example.com/v1/transform" \
-  -H "Authorization: Bearer $VG2_API_KEY" \
-  -H "Content-Type: application/json" \
-  -d '{"text":"convert this"}'
-```
-
-Expected (simulated) JSON response
-```json
-{
-  "status": "success",
-  "transformed": "CONVERT THIS",
-  "meta": {"request_id": "abc123"}
-}
-```
-
-How VG2 uses it
-- vg2.integrations.api_client sends the request
-- Responses are validated and transformed into application objects
-- Errors are handled gracefully and logged; use retries for transient errors
-
-How to reproduce locally (without real API)
-- Use a local mock server like httpie or http.server or a pytest fixture
-- Example quick mock with Python:
-```python
-# quick-mock.py
-from http.server import BaseHTTPRequestHandler, HTTPServer
-import json
-
-class MockHandler(BaseHTTPRequestHandler):
-    def do_POST(self):
-        self.send_response(200)
-        self.send_header("Content-Type", "application/json")
-        self.end_headers()
-        body = {"status":"success","transformed":"CONVERT THIS","meta":{"request_id":"abc123"}}
-        self.wfile.write(json.dumps(body).encode())
-
-HTTPServer(("localhost", 8080), MockHandler).serve_forever()
-```
-Run the mock and point VG2 at http://localhost:8080 for testing.
-
-Showcase 4 — ASCII visualization & report
-----------------------------------------
-VG2 can produce small ASCII-style visual reports that are readable in terminals and CI logs.
-
-Example command:
-```bash
-python -m vg2.report --input results.json --type ascii
-```
-
-Sample ASCII report output:
-╔════════════════════════════════╗
-║ VG2 Results Report             ║
-╠═══════╦════════════════════════╣
-║ id    ║ normalized_value       ║
-╠═══════╬════════════════════════╣
-║ 1     ║ 0.3279                 ║
-║ 2     ║ 0.6230                 ║
-║ 3     ║ 0.0861                 ║
-╚═══════╩════════════════════════╝
-
-Why this is useful
-- Easy to paste into issue comments or CI logs
-- Human-readable summary of processing outcomes
-- Great for acceptance tests that assert presence of key lines
-
-Add your own showcase
----------------------
-We encourage contributors to add showcases demonstrating their feature, bugfix, or integration. For each new showcase:
-- Create a directory under examples/showcases/<short-name>/
-- Add:
-  - a README.md describing the showcase and steps to reproduce
-  - input files (small, synthetic)
-  - expected outputs
-  - scripts/runners that reproduce the behavior (`run.sh` or `run.py`)
-- Open a PR adding the showcase and linking to the issue that motivates it
-
-Example folder layout for a showcase
-```
-examples/
-└── showcases/
-    └── normalize-demo/
-        ├── README.md
-        ├── sample_input.json
-        ├── expected_results.json
-        └── run.sh
-```
-
-Project layout / architecture
------------------------------
-VG2/
-├── vg2/                   # main package
-│   ├── __init__.py
-│   ├── core.py
-│   ├── cli.py
-│   ├── config.py
-│   └── utils/
-│       └── helpers.py
-├── examples/              # project showcases & runnable demos
-│   └── showcases/
-│       └── normalize-demo/
-├── tests/                 # pytest test suite
-│   └── test_core.py
-├── scripts/
-│   └── run_example.py
-├── .github/
-│   └── workflows/
-├── requirements.txt
-├── pyproject.toml / setup.cfg
-└── README.md
-
-Module quick notes
-- vg2/core.py: core logic and main classes
-- vg2/cli.py: command-line interface and argument parsing
-- vg2/config.py: configuration loading (env, YAML)
-- examples/: runnable showcases for users and CI (add more!)
-
-Running tests
--------------
->>>> pytest >>>>
-
-Install pytest if needed:
-```bash
-pip install pytest
-```
-
-Common commands:
-- Run all tests:
-```bash
-pytest
-```
-- Verbose and show print output:
-```bash
-pytest -q -s
-```
-- Single file:
-```bash
-pytest tests/test_core.py
-```
-- Coverage (if coverage is installed):
-```bash
-pytest --cov=vg2 --cov-report=term-missing
-```
-
-Linting, formatting & type checking
-----------------------------------
-Tools:
-[black] [isort] [flake8] [mypy] [pre-commit]
-
-Install and run:
-```bash
-pip install black isort flake8 mypy pre-commit
-black .
-isort .
-flake8 vg2 tests
-mypy vg2
-pre-commit install
-pre-commit run --all-files
-```
-
-Packaging & distribution
-------------------------
-  _______
- /       \
-|  PyPI   |
- \_______/
-
-Build and upload:
-```bash
-pip install build twine
-python -m build
-twine upload --repository testpypi dist/*
-# then to real PyPI:
-twine upload dist/*
-```
-
-Continuous Integration (example)
---------------------------------
-[checkout] -> [install] -> [test] -> [lint] -> [done]
-
-Example GitHub Actions (save as .github/workflows/ci.yml):
-```yaml
-name: CI
-
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-
-jobs:
-  build-test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.11'
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-          pip install pytest
-      - name: Run tests
-        run: pytest -q --disable-warnings --maxfail=1
-      - name: Lint
-        run: |
-          pip install black flake8
-          black --check .
-          flake8 .
-```
-
-Contributing
-------------
-╔════════════════════════════════════════════════╗
-║   THANK YOU FOR CONTRIBUTING TO VG2!           ║
-╚════════════════════════════════════════════════╝
-
-Steps:
-1. Fork the repository.
-2. Create a branch:
-```bash
-git checkout -b feat/short-description
-```
-3. Make changes, run tests & linters.
-4. Add or update a showcase in examples/showcases if your change is user-facing.
-5. Push and open a PR against main:
-```bash
-git push origin feat/short-description
-```
-
-Branch naming suggestions:
-- feat/<short-description>
-- fix/<short-description>
-- docs/<short-description>
-- chore/<short-description>
-
-Issue & PR workflow
--------------------
-[issue opened] -> [discuss] -> [work] -> [PR] -> [review] -> [merge]
-
-- Reference issues in PRs: `Fixes #<issue-number>`
-- Keep PRs small and focused; run tests locally before pushing.
-- If your PR adds behavior covered by a showcase, include or update the showcase.
-
-Troubleshooting & FAQ
----------------------
-Lifebuoy ASCII:
-   __/___
-  /_____/\    Troubleshooting
-  \     \ \
-   \_____\/
-
-Q: ModuleNotFoundError: No module named 'vg2'
-A:
-- From project root run `pip install -e .`
-- Ensure your virtual environment is activated
-
-Q: Tests pass CI, fail locally
-A:
-- Confirm Python and dependency versions match CI
-- Reinstall dependencies: `pip install -r requirements.txt`
-
-Q: How to debug quickly?
-A:
-- Use `logging` at DEBUG level or `pytest -s` to view output
-
-Roadmap
--------
-[ ] Add plugin architecture
-[ ] Increase test coverage to 90%+
-[ ] Add more showcases covering integrations and edge cases
-[ ] Add Docker Compose for integration testing
-[ ] Add performance benchmarks and CI gating
-
-Credits & license
------------------
-  .-""""-.
- / -   -  \
-|  .-. .- |
-|  \o| |o (
-\     ^    \
- '.  )--'  .'
-   '-.___.-'
-
-- Author: You (add your name)
-- Contributors: See GitHub Contributors
-- License: Add LICENSE file (MIT/Apache-2.0/etc.)
-
-Contact
--------
-   _____
-  / ____\
- | (___  _   _  ___
-  \___ \| | | |/ _ \
-  ____) | |_| |  __/
- |_____/ \__, |\___|
-          __/ |
-         |___/
-
-Open an issue on GitHub: https://github.com/sneakyturtle270508/VG2
+**Skills Demonstrated:**
+- SQL fundamentals
+- Database schema design
+- Data types (AutoNumber, Text, Date, Currency)
+- Table relationships
+- Query creation
 
 ---
 
-Final notes
------------
-- This README adds a "Project showcases" section with multiple runnable demos and guidance
-  for adding more. Add real commands and file names from your project where appropriate.
-- If you'd like, I can:
-  - Insert real showcases extracted from your repository (I can scan the code and produce examples),
-  - Commit this README.md to a new branch and open a PR for you,
-  - Or produce a condensed showcase-only file under examples/showcases for easy inclusion.
-Tell me which you'd prefer and (if committing) the branch name to use.
+### **03-ekstraoppgaver** - Extra Challenges (8 Projects)
+
+#### 1. **Math Quiz Game** (`01-Ekstra/`)
+Interactive multiplication quiz
+- 10 random multiplication problems
+- Score tracking
+- Time delays for better UX
+- Performance feedback based on score
+
+#### 2. **Dice Roll Challenge** (`02-Ekstra/`)
+Keep rolling until you get a 6
+- Random dice simulation
+- Attempt counting
+- User interaction (press Enter)
+
+#### 3. **Double Dice Game** (`03-Ekstra/`)
+Roll two dice until matching numbers
+- Multiple random variables
+- Comparison logic
+- Visual feedback
+
+#### 4. **Yatzy Challenge** (`04-Ekstra/`)
+Roll 5 dice until all match
+- **Three versions:**
+  1. Basic version with attempt counter
+  2. Enhanced with ASCII art dice visualization
+  3. Statistical probability calculator version
+- Advanced comparison logic (5-way equality)
+
+#### 5. **Party Planner** (`05-Ekstra/`)
+Calculate hot dogs and buns needed
+- Mathematical calculations
+- `math.ceil()` for rounding up
+- Practical problem solving
+
+#### 6. **Geometry Calculator** (`07-Ekstra/`)
+Calculate areas of various shapes
+- Functions for each shape
+- Circle calculations with `math.pi`
+- Multiple return values
+- Formulas: square, rectangle, triangle, parallelogram, rhombus, trapezoid, circle
+
+#### 7. **Pixel Art Creator** (`08-Exstra/`)
+Create pixel art using turtle graphics
+- Turtle graphics library
+- Coordinate system
+- Color management
+- Pattern creation
+
+---
+
+### **04-egen_ovelse** - Advanced Self-Practice (8 Projects)
+
+#### 1. **Tic Tac Toe** (`01-tic-tac-toe/`)
+Complete two-player strategy game
+- Dynamic 3x3 game board
+- Win detection (8 possible combinations)
+- Input validation and illegal move prevention
+- Turn management system
+- Set-based win condition checking
+- Real-time position tracking
+
+```python
+# Game board display
+1 | 2 | 3
+--+---+--
+4 | 5 | 6
+--+---+--
+7 | 8 | 9
+```
+
+#### 2. **Blackjack** (`02-Blackjack/`)
+Professional casino card game
+- Complete 52-card deck implementation
+- Beautiful ASCII art cards with suits (♠ ♥ ♦ ♣)
+- Smart Ace handling (1 or 11)
+- Realistic card values
+- Dealer AI with strategy
+- Flip animation for dealer's hidden card
+- Virtual money system with betting
+- Hit/Stand mechanics
+
+```python
+┌───────┐  ┌───────┐
+|K♠     |  |A♥     |
+|   ♠   |  |   ♥   |
+|     ♠K|  |     ♥A|
+└───────┘  └───────┘
+Total: 21 - BLACKJACK!
+```
+
+#### 3. **LAN Chat System** (`03-chat-system/`)
+Advanced networked chat application
+- **Server Features:**
+  - UDP broadcast for automatic discovery
+  - TCP connections for chat
+  - Room-based chat with PIN codes
+  - Server administration dashboard
+  - User kick/ban capabilities
+  - Activity logging
+  - Server states (active/standby/stopped)
+- **Client Features:**
+  - Automatic server discovery
+  - Multiple server selection
+  - Reconnection handling
+  - Clean disconnect
+- Complete documentation included
+
+#### 4. **Even Number Checker** (`04-sjekke-partall/`)
+Simple modulo operation example
+- Input validation
+- Modulo arithmetic (% 2)
+- Even/odd determination
+
+#### 5. **Number System Converter** (`05-hex-to-bin/`)
+Multi-format number converter
+- 6 conversion modes:
+  1. Binary → Hexadecimal
+  2. Hexadecimal → Binary
+  3. Integer → Binary
+  4. Binary → Integer
+  5. Integer → Hexadecimal
+  6. Hexadecimal → Integer
+- Menu-driven interface
+- Input validation
+
+#### 6. **Smart File Organizer** (`06-fil-sorterer/`)
+Automated file organization system
+- Automatic course folder detection
+- File monitoring with `watchdog` library
+- Date-based file numbering
+- Dynamic reorganization
+- Prevents conflicts during editing
+- Course name extraction from filenames
+- Real-time file system monitoring
+
+#### 7. **Matrix Effect** (`07-matrix/`)
+Classic Matrix digital rain effect
+- Random character generation
+- Terminal color formatting
+- Continuous animation loop
+- Visual programming demonstration
+
+#### 8. **CSV to ICS Converter** (`08-csv-to-ice/`)
+School schedule converter
+- CSV parsing
+- ICS (iCalendar) format generation
+- Date/time formatting
+- Multi-event handling
+- Import into calendar applications
+
+---
+
+## Featured Advanced Projects
+
+### LAN Chat System - Multi-User Networking
+A production-ready chat system with enterprise features:
+
+**Server Capabilities:**
+- Automatic discovery via UDP broadcast
+- Multi-room support with PIN-based access
+- Real-time user management
+- Administrative controls (kick, ban, close rooms)
+- Activity logging with configurable history
+- Three operational states: active, standby, stopped
+- Thread-safe operations with locking mechanisms
+- Graceful shutdown and cleanup
+
+**Client Features:**
+- Zero-configuration server discovery
+- Multi-server support (choose from discovered servers)
+- Automatic reconnection after network issues
+- Clean disconnect with `/stop` command
+- Real-time message delivery
+- Connection status monitoring
+
+**Technical Implementation:**
+```python
+# Server broadcasts presence
+sock.sendto(b"SERVER_HERE", addr)
+
+# Client discovers servers
+data, addr = client.recvfrom(1024)
+if data.decode("utf-8") == "SERVER_HERE":
+    servers.append(addr[0])
+```
+
+### Smart File Organizer - Automation System
+Intelligent file organization with real-time monitoring:
+
+**Features:**
+- Automatic course folder creation from filenames
+- Date-based file numbering (oldest = 00)
+- Real-time file system monitoring with `watchdog`
+- Smart waiting to avoid conflicts during file creation
+- Batch reorganization when old files are added
+- Prefix extraction and cleanup
+- Cross-platform compatibility
+
+**Use Case:**
+```
+Input: "matte_oppgave.pdf" (created Sept 1)
+       "matte_test.pdf" (created Sept 15)
+       "matte_notater.pdf" (created Sept 5)
+
+Output: matte/
+        ├── 00_oppgave.pdf (Sept 1)
+        ├── 01_notater.pdf (Sept 5)
+        └── 02_test.pdf (Sept 15)
+```
+
+### Blackjack - Professional Game Development
+Casino-quality card game with all features:
+
+**Advanced Features:**
+- Proper deck management with shuffling
+- Visual card representations with Unicode suits
+- Dealer flip animation (card reveal effect)
+- Smart Ace logic (automatic 1/11 switching)
+- Betting system with virtual currency
+- Dealer AI following house rules
+- Multiple game states (betting, playing, dealer turn, results)
+- Clean game loop with replay option
+
+---
+
+## Programming Patterns & Best Practices
+
+### Code Organization
+```python
+# Modular design with functions
+def create_deck():
+    """Generate and shuffle a 52-card deck"""
+    suits = ['♠', '♥', '♦', '♣']
+    values = ['2','3',...,'A']
+    return [v + s for v in values for s in suits]
+
+# Clear separation of concerns
+# - Game logic in functions
+# - Display logic separate
+# - Input validation isolated
+```
+
+### Error Handling
+```python
+# Robust input validation
+try:
+    choice = int(input("Choose: "))
+    if 1 <= choice <= 6:
+        return choice
+except ValueError:
+    print("Invalid input!")
+```
+
+### Data Structures
+```python
+# Efficient win detection in Tic Tac Toe
+winning_combo = [
+    {1,2,3}, {4,5,6}, {7,8,9},  # Rows
+    {1,4,7}, {2,5,8}, {3,6,9},  # Columns
+    {1,5,9}, {3,5,7}            # Diagonals
+]
+# Check win with set operations
+if any(combo.issubset(player1) for combo in winning_combo):
+    return True
+```
+
+---
+
+## How to Run
+
+### Basic Programs
+```bash
+# Clone the repository
+git clone <repository-url>
+cd vg2-it-python
+
+# Run any basic program
+python "02-oppgaver/03-quiz/opg.py"
+```
+
+### Featured Games
+```bash
+# Play Blackjack (requires terminal with Unicode support)
+python "04-egen_ovelse/02-Blackjack/blackjack.py"
+
+# Play Tic Tac Toe
+python "04-egen_ovelse/01-tic-tac-toe/ticTacToe.py"
+
+# Run Yatzy with probability analysis
+python "03-ekstraoppgaver/04-Ekstra/yatsi_med_sansynlighet.py"
+```
+
+### Advanced Projects
+```bash
+# Start LAN Chat Server
+python "04-egen_ovelse/03-chat-system/server.py"
+
+# Connect as client (in another terminal)
+python "04-egen_ovelse/03-chat-system/client.py"
+
+# Run file organizer (configure path first)
+python "04-egen_ovelse/06-fil-sorterer/main.py"
+```
+
+---
+
+## Skills Progression Map
+
+| Level | Skills | Projects |
+|-------|--------|----------|
+| **Beginner** | Variables, I/O, Conditionals | Cup Swap, Age Comparison |
+| **Intermediate** | Loops, Functions, Lists | Quiz, Guessing Game, Order Management |
+| **Advanced** | Algorithms, Data Structures | Tic Tac Toe, Blackjack, Converters |
+| **Expert** | Networking, Threading, Automation | Chat System, File Organizer |
+
+---
+
+## Concepts Mastered
+
+### Fundamental Programming
+- ✅ Variables and data types (all types)
+- ✅ User input with validation
+- ✅ Type conversion and casting
+- ✅ Conditional statements (if/elif/else)
+- ✅ Loops (for, while, nested)
+- ✅ Functions with parameters and returns
+- ✅ String manipulation and formatting
+
+### Data Structures
+- ✅ Lists (creation, indexing, methods)
+- ✅ Dictionaries (key-value pairs)
+- ✅ Sets (for unique collections)
+- ✅ Tuples (immutable sequences)
+- ✅ List comprehensions
+
+### Advanced Techniques
+- ✅ File I/O operations
+- ✅ Random number generation
+- ✅ Mathematical calculations
+- ✅ Algorithm implementation
+- ✅ Network programming (sockets, TCP/UDP)
+- ✅ Multi-threading
+- ✅ Event-driven programming
+- ✅ File system monitoring
+- ✅ ASCII art and visualization
+
+### Software Engineering
+- ✅ Modular code organization
+- ✅ Error handling and validation
+- ✅ Documentation and comments
+- ✅ Code reusability
+- ✅ Testing and debugging
+- ✅ Version control awareness
+- ✅ Database design and management
+- ✅ SQL and relational databases
+
+---
+
+## Code Quality Standards
+
+All projects demonstrate:
+
+- **Norwegian Comments** - Native language for educational clarity
+- **Pseudocode Planning** - Visible in `.txt` files showing thought process
+- **Meaningful Names** - Self-documenting variable and function names
+- **Consistent Style** - Professional formatting and indentation
+- **Modular Design** - Functions and organized code blocks
+- **Input Validation** - Robust error handling for user input
+- **Teacher Feedback** - Inline comments showing instructor guidance
+- **Progressive Complexity** - Each project builds on previous concepts
+
+### Example Code Quality
+```python
+# Clear function with documentation
+def hand_value(hand):
+    """
+    Calculate the optimal value of a blackjack hand.
+    Handles Aces intelligently (1 or 11).
+    """
+    value = 0
+    aces = 0
+    
+    for card in hand:
+        # ... implementation
+    
+    return value
+```
+
+---
+
+## Project Achievements
+
+- **26+ Complete Programs** - From simple exercises to complex applications
+- **3 Full Games** - Tic Tac Toe, Blackjack, Yatzy (with variants)
+- **Network Application** - Complete client-server chat system
+- **Database System** - Employee management with Access
+- **Automation Tool** - Real-time file organization system
+- **Multiple Algorithms** - Win detection, optimization, conversion
+- **Professional UX** - ASCII art, animations, formatted output
+
+---
+
+## Future Enhancements
+
+Potential areas for expansion:
+- GUI versions using tkinter or pygame
+- Database integration for persistent data
+- Web interface for chat system
+- AI opponents for games
+- Additional file format converters
+- Mobile app versions
+
+---
+
+## Contact & Acknowledgments
+
+**William Berge Groensberg**  
+VG2 Student - IT Technology and Services  
+Telemark fylkeskommune
+
+**Special Thanks:**
+- Course instructors for detailed feedback
+- ChatGPT for LAN chat system architecture assistance (documented in readme)
+- Fellow students for testing and suggestions
+
+---
+
+## License & Usage
+
+This is an educational portfolio. Code is available for learning purposes.  
+Feel free to explore, learn from, and adapt these projects!
+
+---
+
+*Last Updated: October 2025*  
+*Repository represents continuous learning from basic Python to advanced networking and automation*
+
+
+
