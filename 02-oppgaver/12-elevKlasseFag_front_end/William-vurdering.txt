@@ -1,0 +1,27 @@
+FØRST, husk alltid å kontrollere at du har levert rett feil!
+
+
+Datamodell:
+Modellen ser fornuftig ut og relasjonene er riktig satt opp.
+
+Primær-/fremmednøkler:
+Dette ser bra ut!
+
+Drop-down-lister:
+Alle drop-down-lister ser greie ut med unntak av fremmednøkkelen «elevId» i tabellen «vurdering». Her bør du ha med også etternavn og foedselsdato for å kunne skille elevene fra hverandre.
+
+Felt:
+I tabellen «elever» bør du også ha med telefon og adresse, postnr og poststed. Ellers bra!
+
+Meny: Helt grei. Kunne hatt en overskrift som forteller hva slags applikasjon dette er.
+
+Skjermbilder: 
+
+Klasses: Fint at du har laget dette som master og detail, men detail-boksen kunne hvert gjort større slik at bruker slipper å scrolle.  Søk fungerer ikke, men ellers bra!
+
+Elever: Flott og velfungerende skjema. Her fungerer også søk.
+
+Fag:  Fint at du har laget dette som master og detail, men detail-boksen kunne hvert gjort større slik at bruker slipper å scrolle.  Fint at du har funnet en løsning for å legge til elever og slette elever fra fag, men å legge til elever kunne vært gjort enkelt ved å velge fremmednøkkelen «elevId» fra tabellen «vurdering» i detail.
+
+
+Måloppnåelse: Høy

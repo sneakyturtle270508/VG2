@@ -1,0 +1,15 @@
+[
+	{
+		"input": "hello",
+		"output": "hi"
+	},
+	{
+		"input": "how are you?",
+		"output": "I'm good"
+	},
+	{
+		"input": "goodbye",
+		"output": "bye"
+	}
+	
+]

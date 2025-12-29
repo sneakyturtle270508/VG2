@@ -1,0 +1,11 @@
+{
+  "hello": {
+    "hi": 1
+  },
+  "how are you?": {
+    "I'm good": 1
+  },
+  "goodbye": {
+    "bye": 1
+  }
+}
