@@ -6,8 +6,24 @@ let authToken = null;
 
 // Initialize app
 document.addEventListener('DOMContentLoaded', () => {
+    // Load saved theme
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.body.setAttribute('data-theme', savedTheme);
+    const themeSelect = document.getElementById('theme-select');
+    if (themeSelect) {
+        themeSelect.value = savedTheme;
+    }
+
     authToken = localStorage.getItem('token');
     if (authToken) {
+        // Decode token to get user info
+        try {
+            const payload = JSON.parse(atob(authToken.split('.')[1]));
+            currentUser = { id: payload.id, username: payload.username };
+            updateUserDisplay();
+        } catch (e) {
+            console.error('Error decoding token:', e);
+        }
         showApp();
         loadNotes();
     } else {
@@ -23,6 +39,15 @@ document.addEventListener('DOMContentLoaded', () => {
             tab.classList.add('active');
             document.getElementById(`${tabName}-form`).classList.add('active');
         });
+    });
+
+    // Close user menu when clicking outside
+    document.addEventListener('click', (e) => {
+        const userMenu = document.getElementById('user-menu');
+        const userIconBtn = document.getElementById('user-icon-btn');
+        if (userMenu && !userMenu.contains(e.target) && !userIconBtn.contains(e.target)) {
+            userMenu.classList.add('hidden');
+        }
     });
 });
 
@@ -59,6 +84,7 @@ async function register() {
             authToken = data.token;
             localStorage.setItem('token', authToken);
             currentUser = data.user;
+            updateUserDisplay();
             showApp();
             loadNotes();
         } else {
@@ -92,6 +118,7 @@ async function login() {
             authToken = data.token;
             localStorage.setItem('token', authToken);
             currentUser = data.user;
+            updateUserDisplay();
             showApp();
             loadNotes();
         } else {
@@ -151,8 +178,22 @@ function displayNotes(notes) {
 function createNewNote() {
     currentNoteId = null;
     document.getElementById('note-content').value = '';
-    document.getElementById('notes-view').classList.remove('active');
-    document.getElementById('note-editor').classList.add('active');
+    
+    // Hide all views
+    document.querySelectorAll('.view').forEach(v => {
+        v.classList.remove('active');
+        v.classList.add('hidden');
+    });
+    
+    // Show editor - remove hidden and add active
+    const editor = document.getElementById('note-editor');
+    editor.classList.remove('hidden');
+    editor.classList.add('active');
+    
+    // Focus on textarea
+    setTimeout(() => {
+        document.getElementById('note-content').focus();
+    }, 100);
 }
 
 function openNote(id) {
@@ -165,15 +206,37 @@ function openNote(id) {
         const note = notes.find(n => n.id === id);
         if (note) {
             document.getElementById('note-content').value = note.content;
-            document.getElementById('notes-view').classList.remove('active');
-            document.getElementById('note-editor').classList.add('active');
+            
+            // Hide all views
+            document.querySelectorAll('.view').forEach(v => {
+                v.classList.remove('active');
+                v.classList.add('hidden');
+            });
+            
+            // Show editor
+            const editor = document.getElementById('note-editor');
+            editor.classList.remove('hidden');
+            editor.classList.add('active');
+            
+            // Focus on textarea
+            setTimeout(() => {
+                document.getElementById('note-content').focus();
+            }, 100);
         }
     });
 }
 
 function closeEditor() {
-    document.getElementById('note-editor').classList.remove('active');
-    document.getElementById('notes-view').classList.add('active');
+    // Hide editor
+    const editor = document.getElementById('note-editor');
+    editor.classList.remove('active');
+    editor.classList.add('hidden');
+    
+    // Show notes view
+    const notesView = document.getElementById('notes-view');
+    notesView.classList.remove('hidden');
+    notesView.classList.add('active');
+    
     currentNoteId = null;
     loadNotes();
 }
@@ -234,11 +297,19 @@ async function generateFlashcards() {
 
         if (response.ok) {
             alert(`Generated ${data.count} flashcards! Check the Flashcards tab.`);
+            // Refresh flashcards view if it's currently open
+            if (document.getElementById('flashcards-view').classList.contains('active')) {
+                showFlashcards();
+            }
         } else {
-            alert(data.error || 'Failed to generate flashcards');
+            let errorMsg = data.error || 'Failed to generate flashcards';
+            if (errorMsg.includes('Ollama') || errorMsg.includes('connect')) {
+                errorMsg += '\n\nDon\'t worry! The app used a fallback method to create flashcards from your notes.';
+            }
+            alert(errorMsg);
         }
     } catch (error) {
-        alert('Error generating flashcards. Make sure Ollama is running.');
+        alert('Error generating flashcards. The app will use a fallback method to create flashcards from your notes.');
     } finally {
         btn.textContent = originalText;
         btn.disabled = false;
@@ -266,11 +337,19 @@ async function generateQuestions() {
 
         if (response.ok) {
             alert(`Generated ${data.count} questions! Check the Questions tab.`);
+            // Refresh questions view if it's currently open
+            if (document.getElementById('questions-view').classList.contains('active')) {
+                showQuestions();
+            }
         } else {
-            alert(data.error || 'Failed to generate questions');
+            let errorMsg = data.error || 'Failed to generate questions';
+            if (errorMsg.includes('Ollama') || errorMsg.includes('connect')) {
+                errorMsg += '\n\nDon\'t worry! The app used a fallback method to create questions from your notes.';
+            }
+            alert(errorMsg);
         }
     } catch (error) {
-        alert('Error generating questions. Make sure Ollama is running.');
+        alert('Error generating questions. The app will use a fallback method to create questions from your notes.');
     } finally {
         btn.textContent = originalText;
         btn.disabled = false;
@@ -318,10 +397,192 @@ async function showQuestions() {
 }
 
 function setActiveView(viewName) {
-    document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+    // Hide all views
+    document.querySelectorAll('.view').forEach(v => {
+        v.classList.remove('active');
+        v.classList.add('hidden');
+    });
+    
+    // Hide settings if open
+    document.getElementById('settings-view').classList.remove('active');
+    document.getElementById('settings-view').classList.add('hidden');
+    
+    // Show the requested view
+    const targetView = document.getElementById(`${viewName}-view`);
+    if (targetView) {
+        targetView.classList.remove('hidden');
+        targetView.classList.add('active');
+    }
+    
+    // Update nav buttons
     document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
-    document.getElementById(`${viewName}-view`).classList.add('active');
-    document.querySelector(`[data-view="${viewName}"]`).classList.add('active');
+    const navBtn = document.querySelector(`[data-view="${viewName}"]`);
+    if (navBtn) {
+        navBtn.classList.add('active');
+    }
+}
+
+function updateUserDisplay() {
+    if (currentUser) {
+        const usernameDisplay = document.getElementById('username-display');
+        const userMenuUsername = document.getElementById('user-menu-username');
+        const settingsUsername = document.getElementById('settings-username');
+        
+        if (usernameDisplay) usernameDisplay.textContent = currentUser.username;
+        if (userMenuUsername) userMenuUsername.textContent = currentUser.username;
+        if (settingsUsername) settingsUsername.textContent = currentUser.username;
+    }
+}
+
+function toggleUserMenu() {
+    const menu = document.getElementById('user-menu');
+    menu.classList.toggle('hidden');
+}
+
+async function showUserSettings() {
+    document.getElementById('user-menu').classList.add('hidden');
+    
+    // Hide all views
+    document.querySelectorAll('.view').forEach(v => {
+        v.classList.remove('active');
+        v.classList.add('hidden');
+    });
+    
+    // Show settings
+    const settingsView = document.getElementById('settings-view');
+    settingsView.classList.remove('hidden');
+    settingsView.classList.add('active');
+    
+    // Load user data
+    if (currentUser) {
+        document.getElementById('settings-username').textContent = currentUser.username;
+        
+        // Load available contexts and populate dropdown
+        try {
+            const contextsResponse = await fetch(`${API_URL}/api/contexts`, {
+                headers: getAuthHeaders()
+            });
+            if (contextsResponse.ok) {
+                const contexts = await contextsResponse.json();
+                const contextSelect = document.getElementById('context-select');
+                
+                // Clear and populate context select
+                if (contextSelect) {
+                    contextSelect.innerHTML = contexts.map(ctx => 
+                        `<option value="${ctx.id}">${ctx.name}</option>`
+                    ).join('');
+                }
+            }
+            
+            // Load user preferences
+            const response = await fetch(`${API_URL}/api/preferences`, {
+                headers: getAuthHeaders()
+            });
+            if (response.ok) {
+                const prefs = await response.json();
+                const contextSelect = document.getElementById('context-select');
+                const contextDesc = document.getElementById('context-description');
+                
+                if (contextSelect) {
+                    contextSelect.value = prefs.ai_context || 'car-theory';
+                }
+                
+                // Update description
+                const contextsResponse2 = await fetch(`${API_URL}/api/contexts`, {
+                    headers: getAuthHeaders()
+                });
+                if (contextsResponse2.ok) {
+                    const contexts = await contextsResponse2.json();
+                    const selectedContext = contexts.find(c => c.id === (prefs.ai_context || 'car-theory'));
+                    if (selectedContext && contextDesc) {
+                        contextDesc.textContent = selectedContext.description;
+                    }
+                }
+            }
+        } catch (error) {
+            console.error('Error loading preferences:', error);
+        }
+    }
+}
+
+function closeSettings() {
+    const settingsView = document.getElementById('settings-view');
+    settingsView.classList.remove('active');
+    settingsView.classList.add('hidden');
+    showNotes();
+}
+
+function changeTheme() {
+    const theme = document.getElementById('theme-select').value;
+    document.body.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+}
+
+async function changeContext() {
+    const contextSelect = document.getElementById('context-select');
+    const contextDesc = document.getElementById('context-description');
+    const selectedContext = contextSelect.value;
+    
+    if (!selectedContext) return;
+    
+    try {
+        // Update description
+        const response = await fetch(`${API_URL}/api/contexts`, {
+            headers: getAuthHeaders()
+        });
+        if (response.ok) {
+            const contexts = await response.json();
+            const context = contexts.find(c => c.id === selectedContext);
+            if (context && contextDesc) {
+                contextDesc.textContent = context.description;
+            }
+        }
+        
+        // Save preference
+        const saveResponse = await fetch(`${API_URL}/api/preferences`, {
+            method: 'PUT',
+            headers: getAuthHeaders(),
+            body: JSON.stringify({ ai_context: selectedContext })
+        });
+        
+        if (saveResponse.ok) {
+            // Show success message
+            const desc = contextDesc || document.createElement('div');
+            const originalText = desc.textContent;
+            desc.textContent = '✓ Context updated!';
+            desc.style.color = 'var(--primary-color)';
+            setTimeout(() => {
+                desc.textContent = originalText;
+                desc.style.color = '';
+            }, 2000);
+        } else {
+            alert('Failed to update context preference');
+        }
+    } catch (error) {
+        console.error('Error updating context:', error);
+        alert('Error updating context preference');
+    }
+}
+
+function exportData() {
+    // Export all notes as JSON
+    fetch(`${API_URL}/api/notes`, {
+        headers: getAuthHeaders()
+    })
+    .then(res => res.json())
+    .then(notes => {
+        const dataStr = JSON.stringify(notes, null, 2);
+        const dataBlob = new Blob([dataStr], { type: 'application/json' });
+        const url = URL.createObjectURL(dataBlob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = `lappen-notes-${new Date().toISOString().split('T')[0]}.json`;
+        link.click();
+        URL.revokeObjectURL(url);
+    })
+    .catch(err => {
+        alert('Error exporting data');
+    });
 }
 
 function displayFlashcards(flashcards) {
