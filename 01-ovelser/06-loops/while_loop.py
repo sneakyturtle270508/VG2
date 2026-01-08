@@ -2,7 +2,7 @@
 # @Author: William Berge Groensberg
 # @Date:   2025-09-09 09:57:59
 # @Last Modified by:   William Berge Groensberg
-# @Last Modified time: 2025-09-09 10:05:36
+# @Last Modified time: 2026-01-01 02:17:18
 
 import time
 
@@ -16,3 +16,5 @@ while teller != antallRunder:
     time.sleep(1)
     
 print("du er ferdig")
+
+# dette er hele
