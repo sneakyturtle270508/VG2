@@ -2,13 +2,12 @@
 # @Author: William Berge Groensberg
 # @Date:   2026-04-12 18:23:44
 # @Last Modified by:   William Berge Groensberg
-# @Last Modified time: 2026-04-13 23:51:44
+# @Last Modified time: 2026-04-14 00:02:49
 
 
 # ============================================================
 # SUPERKLASSE
 # ============================================================
-
 
 
 from prosessor import Prosessor
