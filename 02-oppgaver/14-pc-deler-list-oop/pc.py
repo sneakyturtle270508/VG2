@@ -2,7 +2,7 @@
 # @Author: William Berge Groensberg
 # @Date:   2026-04-07 11:09:18
 # @Last Modified by:   William Berge Groensberg
-# @Last Modified time: 2026-04-12 18:47:18
+# @Last Modified time: 2026-04-13 23:58:19
 
 # this is the super class for all the pc parts
 
@@ -20,8 +20,7 @@ class Pc:
 		self.tilstand = tilstand
  
 	
-  
-  # funksjon for fortjeneste
+
   
 
     # Metode vis_komponent():
@@ -41,9 +40,9 @@ class Pc:
 
     # Metode fortjeneste():
 	def fortjeneste(self):
-		print(self.salgspris - self.inkjopspris)
     # regn ut salgspris - inkjopspris
     # print resultatet
+		print(self.salgspris - self.inkjopspris)
 
 
 

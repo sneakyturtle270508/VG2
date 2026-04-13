@@ -68,8 +68,8 @@ def registrer_komponent():
 
     merke          = input(WHT + "  Merke:                    " + RST)
     modell         = input(WHT + "  Modell:                   " + RST)
-    inkjopspris    = int(input(WHT + "  Innkjøpspris (kr):       " + RST))
-    forventet_pris = int(input(WHT + "  Forventet salgspris (kr):" + RST))
+    inkjopspris    = float(input(WHT + "  Innkjøpspris (kr):       " + RST))
+    forventet_pris = float(input(WHT + "  Forventet salgspris (kr):" + RST))
     tilstand       = input(WHT + "  Tilstand (god/slitt):     " + RST)
 
     if kat == 0:  # CPU
