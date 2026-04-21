@@ -1,38 +1,20 @@
 # -*- coding: utf-8 -*-
-# @Author: William Berge Groensberg
-# @Date:   2026-04-07 11:09:18
-# @Last Modified by:   William Berge Groensberg
-# @Last Modified time: 2026-04-14 00:04:39
+# Superklasse for alle PC-komponenter
 
-# this is the super class for all the pc parts
-
-# Opprett klassen Pc
-
-
-# Konstruktør med felles properties:
-# merke, modell, pris, inkjopspris, salgspris, tilstand
 class Pc:
-    def __init__(self, merke, modell, pris, inkjopspris, salgspris, tilstand):
+    def __init__(self, merke, modellnavn, inkjopspris, salgspris, tilstand):
         self.merke = merke
-        self.modell = modell
-        self.pris = pris
+        self.modellnavn = modellnavn
         self.inkjopspris = inkjopspris
         self.salgspris = salgspris
         self.tilstand = tilstand
 
-        # Metode vis_komponent():
-
     def vis_komponent(self):
-        # print merke
-        print("merke: ", self.merke)
-        # print modell
-        print("modell: ", self.modell)
-        # print pris
-        print("pris: ", self.pris)
-        # print inkjopspris
-        print("inkjopspris: ", self.inkjopspris)
-        # print salgspris
-        print("salgspris: ", self.salgspris)
-        # print tilstand
-        print("tilstand: ", self.tilstand)
+        print(f"  merke:        {self.merke}")
+        print(f"  modellnavn:   {self.modellnavn}")
+        print(f"  inkjøpspris:  {self.inkjopspris} kr")
+        print(f"  salgspris:    {self.salgspris} kr")
+        print(f"  tilstand:     {self.tilstand}")
 
+    def fortjeneste(self):
+        return self.salgspris - self.inkjopspris

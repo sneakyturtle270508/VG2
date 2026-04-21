@@ -99,7 +99,8 @@ def registrer_komponent():
 # ============================================================
 
 hoved_valg     = ["1. Se alle komponenter", "2. Regnskap", "3. Kategorier", "4. Registrer ny", "0. Avslutt"]
-kategori_valg  = ["1. CPU", "2. GPU", "3. RAM", "Tilbake"]
+kategori_valg  = ["1. CPU", "2. GPU", "3. RAM", "4. psu",
+                  "Tilbake"]
 
 while True:
     clear()
@@ -156,7 +157,7 @@ while True:
             print(YLW + "\n  RAM:\n" + RST)
             for komponent in ram:
                 vis_komponent_pent(komponent)
-
+				
     elif valgt == 3:  # Registrer ny
         registrer_komponent()
 

@@ -1,22 +1,41 @@
 # -*- coding: utf-8 -*-
 # @Author: William Berge Groensberg
-# @Date:   2026-04-12 18:44:16
+# @Date:   2026-04-14 00:13:55
 # @Last Modified by:   William Berge Groensberg
-# @Last Modified time: 2026-04-14 00:02:15
+# @Last Modified time: 2026-04-14 08:21:11
+
 from pc import Pc
 
 
 class Grafikkort(Pc):
-    # Konstruktør - kall super og legg til egne properties:
     def __init__(
-        self, merke, modell, pris, inkjopspris, salgspris, tilstand, vram_gb, minnetype
+        self,
+        merke,
+        modellnavn,
+        inkjopspris,
+        salgspris,
+        tilstand,
+        vram_gb,
+        vram_type,
+        kjerner,
+        klokkehastighet_mhz,
+        stroemforbruk_w,
+        utganger,
     ):
-        super().__init__(merke, modell, pris, inkjopspris, salgspris, tilstand)
-        # vram_gb, minnetype
+        super().__init__(merke, modellnavn, inkjopspris, salgspris, tilstand)
         self.vram_gb = vram_gb
-        self.minnetype = minnetype
+        self.vram_type = vram_type
+        self.kjerner = kjerner
+        self.klokkehastighet_mhz = klokkehastighet_mhz
+        self.stroemforbruk_w = stroemforbruk_w
+        self.utganger = utganger
 
     def vis_komponent(self):
+        print("GPU")
         super().vis_komponent()
-        print("vram: ", self.vram_gb)
-        print("minnetype: ", self.minnetype)
+        print(f"  VRAM:               {self.vram_gb} GB")
+        print(f"  VRAM_type:          {self.vram_type}")
+        print(f"  kjerner:            {self.kjerner}")
+        print(f"  klokkehastighet:    {self.klokkehastighet_mhz} MHz")
+        print(f"  strømforbruk:       {self.stroemforbruk_w} W")
+        print(f"  utganger:           {self.utganger}")
